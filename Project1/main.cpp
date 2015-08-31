@@ -4,7 +4,7 @@
 #include <iostream>
 #include <time.h>
 #include <math.h>
-#include <armadillo>
+#include "lib.h"
 
 using namespace std;
 //using namespace arma;
@@ -34,7 +34,8 @@ int main()
     // GAUSSIAN
     // …
 
-    // LU DECOMP: use lib.cpp
+    // LU DECOMP: use lib.cpp function: void ludcmp(double **a, int n, int *indx, double *d)
+    // Solve linear equation using LU decomposition with function: void lubksb(double **a, int n, int *indx, double *b)
     // …
 
     // ERROR
