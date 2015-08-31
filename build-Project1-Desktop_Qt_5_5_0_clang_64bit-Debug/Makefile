@@ -167,6 +167,7 @@ DIST          = /Applications/QT/5.5/clang_64/mkspecs/features/spec_pre.prf \
 		/Applications/QT/5.5/clang_64/mkspecs/features/qt_config.prf \
 		/Applications/QT/5.5/clang_64/mkspecs/macx-clang/qmake.conf \
 		/Applications/QT/5.5/clang_64/mkspecs/features/spec_post.prf \
+		../Project1/.qmake.stash \
 		/Applications/QT/5.5/clang_64/mkspecs/features/exclusive_builds.prf \
 		/Applications/QT/5.5/clang_64/mkspecs/features/default_pre.prf \
 		/Applications/QT/5.5/clang_64/mkspecs/features/mac/default_pre.prf \
@@ -342,6 +343,7 @@ Makefile: ../Project1/Project1.pro /Applications/QT/5.5/clang_64/mkspecs/macx-cl
 		/Applications/QT/5.5/clang_64/mkspecs/features/qt_config.prf \
 		/Applications/QT/5.5/clang_64/mkspecs/macx-clang/qmake.conf \
 		/Applications/QT/5.5/clang_64/mkspecs/features/spec_post.prf \
+		.qmake.stash \
 		/Applications/QT/5.5/clang_64/mkspecs/features/exclusive_builds.prf \
 		/Applications/QT/5.5/clang_64/mkspecs/features/default_pre.prf \
 		/Applications/QT/5.5/clang_64/mkspecs/features/mac/default_pre.prf \
@@ -476,6 +478,7 @@ Makefile: ../Project1/Project1.pro /Applications/QT/5.5/clang_64/mkspecs/macx-cl
 /Applications/QT/5.5/clang_64/mkspecs/features/qt_config.prf:
 /Applications/QT/5.5/clang_64/mkspecs/macx-clang/qmake.conf:
 /Applications/QT/5.5/clang_64/mkspecs/features/spec_post.prf:
+.qmake.stash:
 /Applications/QT/5.5/clang_64/mkspecs/features/exclusive_builds.prf:
 /Applications/QT/5.5/clang_64/mkspecs/features/default_pre.prf:
 /Applications/QT/5.5/clang_64/mkspecs/features/mac/default_pre.prf:
