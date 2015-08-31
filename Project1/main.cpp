@@ -62,7 +62,7 @@ int main()
     // ERROR
     // double e[], err[];
     //for (i=1 ; i < n ; i++){
-    //  e[i] = (v[i]-u[i])/u[i];
+    //  e[i] = (v[i]-u[i])./u[i];
     //  err[i] = log10(abs(e[i]));
     //}
 
