@@ -29,7 +29,7 @@ int main()
     start = clock();
 
     // START CODE
-    int n;
+    int n,i,j;
     double h = 1./(n+1);
 
 
@@ -50,6 +50,19 @@ int main()
     // Backward substitution:
     for(i=n-1; i >= 1; i--) {
         u[i] -= temp[i+1]*u[i+1];
+    }
+
+    //n = 10;
+    int A[n][n];
+    for(i=0 ; i<n ; i++){
+        for(j=0 ; j<n ; j++){
+            if(j==i)
+                A[i][j] = 2;
+            else if(j == i+1 || j == i-1)
+                A[i][j] = -1;
+            else
+                A[i][j] = 0;
+        }
     }
 
     // GAUSSIAN
