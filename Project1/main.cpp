@@ -34,7 +34,7 @@ int main()
     // GAUSSIAN
     // …
 
-    // LU DECOMP
+    // LU DECOMP: use lib.cpp
     // …
 
     // ERROR
