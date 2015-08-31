@@ -39,11 +39,11 @@ int main()
     // SIMPLE ALGORITHM
     // Forward substitution:
     btemp = b[1];
-    u[1] = f[1]/btemp;
+    u[1] = h^2*f[1]/btemp;
     for(i=2; i <= n; i++) {
         temp[i] = c[i-1]/btemp;
         btemp = b[i]-a[i]*temp[i];
-        u[i] = (f[i] - a[i]*u[i-1])/btemp;
+        u[i] = (h^2*f[i] - a[i]*u[i-1])/btemp;
     }
 
     // Backward substitution:
