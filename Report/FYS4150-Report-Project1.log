@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2014.7.15)  31 AUG 2015 13:30
+This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2014.7.15)  31 AUG 2015 13:57
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1085,14 +1085,16 @@ LaTeX Font Info:    Font shape `T1/txss/m/n' will be
 LaTeX Font Info:    Font shape `T1/txss/bx/n' will be
 (Font)              scaled to size 10.40245pt on input line 97.
 LaTeX Font Info:    Font shape `T1/txss/m/n' will be
-(Font)              scaled to size 9.49997pt on input line 107.
+(Font)              scaled to size 9.49997pt on input line 110.
 LaTeX Font Info:    Font shape `T1/txss/m/it' in size <10> not available
-(Font)              Font shape `T1/txss/m/sl' tried instead on input line 107.
+(Font)              Font shape `T1/txss/m/sl' tried instead on input line 110.
 LaTeX Font Info:    Font shape `T1/txss/m/sl' will be
-(Font)              scaled to size 9.49997pt on input line 107.
+(Font)              scaled to size 9.49997pt on input line 110.
 
-
-LaTeX Warning: Reference `fig:XX' on page 1 undefined on input line 108.
+Underfull \hbox (badness 1521) in paragraph at lines 124--125
+\T1/txr/m/n/10 We can there-fore rewrite our ma-trix \T1/txr/bx/n/10 A \T1/txr/
+m/n/10 in terms of one-
+ []
 
 No file FYS4150-Report-Project1.bbl.
 [1{/usr/local/texlive/2014/texmf-var/fonts/map/pdftex/updmap/pdftex.map}
@@ -1102,8 +1104,8 @@ No file FYS4150-Report-Project1.bbl.
 
 
 ]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 133.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 133.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 158.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 158.
 
 (./FYS4150-Report-Project1.aux
 * soulpos - computing points - it may take a few seconds *
@@ -1111,34 +1113,33 @@ Package atveryend Info: Empty hook `AfterLastShipout' on input line 133.
 
 
 (./FYS4150-Report-Project1.upa))
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 133.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 133.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 158.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 158.
 Package rerunfilecheck Info: File `FYS4150-Report-Project1.out' has not changed
 .
-(rerunfilecheck)             Checksum: 4BA5989B13104B286AB423D11D4EA7A4;248.
-
-
-LaTeX Warning: There were undefined references.
-
+(rerunfilecheck)             Checksum: 0BA3F757F094A29A87FF402B7BC16675;328.
  ) 
 Here is how much of TeX's memory you used:
- 12660 strings out of 493117
- 190404 string characters out of 6135433
- 305270 words of memory out of 5000000
+ 12667 strings out of 493117
+ 190481 string characters out of 6135433
+ 309277 words of memory out of 5000000
  15830 multiletter control sequences out of 15000+600000
- 57122 words of font info for 106 fonts, out of 8000000 for 9000
+ 62218 words of font info for 113 fonts, out of 8000000 for 9000
  1142 hyphenation exceptions out of 8191
- 42i,7n,45p,1097b,380s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 42i,9n,45p,1097b,380s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2014/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/local/t
-exlive/2014/texmf-dist/fonts/type1/urw/helvetic/uhvb8a.pfb></usr/local/texlive/
-2014/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb></usr/local/texlive/2014/te
-xmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/local/texlive/2014/texmf-dist/f
-onts/type1/urw/times/utmr8a.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1
-/urw/times/utmri8a.pfb>
-Output written on FYS4150-Report-Project1.pdf (1 page, 48162 bytes).
+exlive/2014/texmf-dist/fonts/type1/public/txfonts/rtxmi.pfb></usr/local/texlive
+/2014/texmf-dist/fonts/type1/public/txfonts/rtxr.pfb></usr/local/texlive/2014/t
+exmf-dist/fonts/type1/public/txfonts/txex.pfb></usr/local/texlive/2014/texmf-di
+st/fonts/type1/public/txfonts/txsy.pfb></usr/local/texlive/2014/texmf-dist/font
+s/type1/urw/helvetic/uhvb8a.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1
+/urw/helvetic/uhvr8a.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/urw/ti
+mes/utmb8a.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/urw/times/utmr8a
+.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
+Output written on FYS4150-Report-Project1.pdf (1 page, 60573 bytes).
 PDF statistics:
- 57 PDF objects out of 1000 (max. 8388607)
- 48 compressed objects within 1 object stream
- 7 named destinations out of 1000 (max. 500000)
- 41 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 79 PDF objects out of 1000 (max. 8388607)
+ 66 compressed objects within 1 object stream
+ 10 named destinations out of 1000 (max. 500000)
+ 49 words of extra memory for PDF output out of 10000 (max. 10000000)
 

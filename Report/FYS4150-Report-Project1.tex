@@ -94,18 +94,43 @@
 
 
 
-\section{Introduction}     \label{sec:introduction}
+\section{Introduction}\label{sec:introduction}
+In this project we will solve the one-dimensional Poissson equation with Dirichlet boundary conditions by rewriting it as a set of linear equations.The equation to be solved is:
+
+\begin{equation}
+    \begin{aligned}
+	-u''(x) = f(x) \hspace{0.5cm} x\in(0,1), \hspace{0.5cm} u(0) = u(1) = 0
+    \end{aligned}
+\end{equation}
+
+MORE COMING HERE.
 
 
-The phenomenon of \ldots
+\section{Solving the problem}\label{sec:observations}
+\subsection{Simple algorithm}
+In our case we are dealing with a simple tridiagonal matrix \textbf{A}:
+
+\begin{equation}
+    {\bf A} = \left(\begin{array}{cccccc}
+                           2& -1& 0 &\dots   & \dots &0 \\
+                           -1 & 2 & -1 &0 &\dots &\dots \\
+                           0&-1 &2 & -1 & 0 & \dots \\
+                           & \dots   & \dots &\dots   &\dots & \dots \\
+                           0&\dots   &  &-1 &2& -1 \\
+                           0&\dots    &  & 0  &-1 & 2 \\
+                      \end{array} \right)
+\end{equation}
+
+\noindent We can therefore rewrite our matrix \textbf{A} in terms of one-dimensional vectors \textit{a, b, c} of length 1:\textit{n}.
+
+MORE COMING HERE.
 
 
 
-\section{Observations}    \label{sec:observations}
+\subsection{Using a library package}
+In addition to solving the linear second-order differential equation Eq. XX using the simple algorithm described above, we want to solve the equation using Gaussian elimination and LU decomposition, then compare the results.
 
-
-\subsection{Instrumentation}
-See Fig.~\ref{fig:XX}.
+MORE COMING HERE.
 
 
 
