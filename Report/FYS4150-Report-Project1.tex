@@ -1,83 +1,14 @@
 \documentclass{aa} 
 
-\usepackage{graphicx,natbib,url,twoopt}
-\usepackage[varg]{txfonts}           %% A&A font choice
-\usepackage{hyperref}                %% for pdflatex
-%%\usepackage[breaklinks]{hyperref}  %% for latex+dvips
-%%\usepackage{breakurl}              %% for latex+dvips
-\usepackage{pdfcomment}              %% for popup acronym meanings
-\usepackage{acronym}                 %% for popup acronym meanings
+\usepackage{graphicx}
+\usepackage[varg]{txfonts}
+\usepackage{amsmath}
 
-\hypersetup{
-  colorlinks=true,   %% links colored instead of frames
-  urlcolor=blue,     %% external hyperlinks
-  linkcolor=red,     %% internal latex links (eg Fig)
-}
-
-\bibpunct{(}{)}{;}{a}{}{,}    %% natbib cite format used by A&A and ApJ
-
-\pagestyle{plain}   %% undo the fancy A&A pagestyle 
-
-%% Add commands to add a note or link to a reference
-\makeatletter
-\newcommand{\bibnote}[2]{\@namedef{#1note}{#2}}
-\newcommand{\biblink}[2]{\@namedef{#1link}{#2}}
-\makeatother
-
-\makeatletter
- \newcommandtwoopt{\citeads}[3][][]{%
-   \nonstopmode%              %% fix to not stop at error message in latex
-   \href{http://adsabs.harvard.edu/abs/#3}%
-        {\def\hyper@linkstart##1##2{}%
-         \let\hyper@linkend\@empty\citealp[#1][#2]{#3}}%   %% Rutten, 2000
-   \biblink{#3}{\href{http://adsabs.harvard.edu/abs/#3}{ADS}}%
-   \errorstopmode}            %% fix to resume stopping at error messages 
- \newcommandtwoopt{\citepads}[3][][]{%
-   \nonstopmode%              %% fix to not stop at error message in latex
-   \href{http://adsabs.harvard.edu/abs/#3}%
-        {\def\hyper@linkstart##1##2{}%
-         \let\hyper@linkend\@empty\citep[#1][#2]{#3}}%     %% (Rutten 2000)
-   \biblink{#3}{\href{http://adsabs.harvard.edu/abs/#3}{ADS}}%
-   \errorstopmode}            %% fix to resume stopping at error messages
- \newcommandtwoopt{\citetads}[3][][]{%
-   \nonstopmode%              %% fix to not stop at error message in latex
-   \href{http://adsabs.harvard.edu/abs/#3}%
-        {\def\hyper@linkstart##1##2{}%
-         \let\hyper@linkend\@empty\citet[#1][#2]{#3}}%     %% Rutten (2000)
-   \biblink{#3}{\href{http://adsabs.harvard.edu/abs/#3}{ADS}}%
-   \errorstopmode}            %% fix to resume stopping at error messages 
- \newcommandtwoopt{\citeyearads}[3][][]{%
-   \nonstopmode%              %% fix to not stop at error message in latex
-   \href{http://adsabs.harvard.edu/abs/#3}%
-        {\def\hyper@linkstart##1##2{}%
-         \let\hyper@linkend\@empty\citeyear[#1][#2]{#3}}%  %% 2000
-   \biblink{#3}{\href{http://adsabs.harvard.edu/abs/#3}{ADS}}%
-   \errorstopmode}            %% fix to resume stopping at error messages 
-\makeatother
-
-%% Acronyms
-\newacro{ADS}{Astrophysics Data System}
-\newacro{NLTE}{non-local thermodynamic equilibrium}
-\newacro{NASA}{National Aeronautics and Space Administration}
-
-%% Add popups with meaning to acronyms 
-%% NB: only show up in Adobe Reader and do not work with \input or \include
-\gdef\acp#1{%
-  \pdfmarkupcomment[markup=Underline,color={1 1 1},author={{#1}},opacity=0]%
-  {{#1}}{{\acl{#1}}}}
-
-%% Spectral species
-\def\MgI{\ion{Mg}{I}}          %% A&A; for aastex use \def\MgI{\ion{Mg}{1}} 
-\def\MgII{\ion{Mg}{II}}        %% A&A; for aastex use \def\MgII{\ion{Mg}{2}} 
-
-%% Hyphenation
-\hyphenation{Schrij-ver}       %% Dutch ij is a single character
-
+\pagestyle{plain}
 
 \begin{document}  
 
 \twocolumn[{
-\vspace*{4ex}
 \begin{center}
   {\Large \bf FYS4150 Project 1: \\1-dimensional Poisson equation}\\[4ex]       
   {\large \bf Marie Foss$^{1}$, 
@@ -85,7 +16,7 @@
   \begin{minipage}[t]{15cm}
         $^1$ Institute of Theoretical Astrophysics, University of Oslo\\
 
-  {\bf Abstract.}  We discovered \ldots 
+  {\bf Abstract:}  We discovered \ldots 
 
   \vspace*{2ex}
   \end{minipage}
@@ -93,22 +24,28 @@
 }] 
 
 
-
 \section{Introduction}\label{sec:introduction}
-In this project we will solve the one-dimensional Poissson equation with Dirichlet boundary conditions by rewriting it as a set of linear equations.The equation to be solved is:
+In this project we will solve the one-dimensional Poissson equation with Dirichlet boundary conditions by rewriting it as a set of linear equations and solving these numerically in a program written in C++.The equation to be solved is:
 
-\begin{equation}
-    \begin{aligned}
+\begin{equation}\label{eq:Poisson}
 	-u''(x) = f(x) \hspace{0.5cm} x\in(0,1), \hspace{0.5cm} u(0) = u(1) = 0
-    \end{aligned}
 \end{equation}
 
-MORE COMING HERE.
+\noindent and we define the discretized approximation  to $u$ as $v_i$  with grid points $x_i=ih$   in the interval from $x_0=0$ to $x_{n+1}=1$. The step length or spacing is defined as $h=1/(n+1)$. We then have the boundary conditions $v_0 = v_{n+1} = 0$. We can approximate the second derivative of $u$ with:
 
+\begin{equation}\label{eq:second_derivative}
+   -\frac{v_{i+1}+v_{i-1}-2v_i}{h^2} = f_i  \hspace{0.5cm} \mathrm{for} \hspace{0.1cm} i=1,\dots, n,
+\end{equation}
 
-\section{Solving the problem}\label{sec:observations}
-\subsection{Simple algorithm}
-In our case we are dealing with a simple tridiagonal matrix \textbf{A}:
+\noindent where $f_i=f(x_i)$.\\
+
+\noindent Eq.~\ref{eq:second_derivative} can be written as a linear set of equations of the form: 
+
+\begin{equation}
+	{\bf A}{\bf v} = \tilde{{\bf b}}
+\end{equation}
+
+\noindent where $\tilde{b}_i=h^2f_i$ and \textbf{A} is an $n\times n$ matrix of the form:
 
 \begin{equation}
     {\bf A} = \left(\begin{array}{cccccc}
@@ -121,39 +58,71 @@ In our case we are dealing with a simple tridiagonal matrix \textbf{A}:
                       \end{array} \right)
 \end{equation}
 
-\noindent We can therefore rewrite our matrix \textbf{A} in terms of one-dimensional vectors \textit{a, b, c} of length 1:\textit{n}.
+\noindent (Show this!!) \\
 
-MORE COMING HERE.
+\noindent We will assume that the source term is $f(x) = 100e^{-10x}$. Using the interval and boundary conditions as stated above, the above differential equation has a closed-form  solution given by $u(x) = 1-(1-e^{-10})x-e^{-10x}$. We will compare our numerical solution with this result. 
+
+
+
+
+
+\section{Solving the problem}\label{sec:observations}
+\subsection{Simple algorithm}
+In our case we are dealing with a simple tridiagonal matrix. We can therefore rewrite our matrix \textbf{A} in terms of one-dimensional vectors \textit{a, b, c} of length 1:\textit{n}. The linear equation then reads:
+
+\begin{equation}
+    {\bf A} = \left(\begin{array}{cccccc}
+                           b_1& c_1 & 0 &\dots   & \dots &\dots \\
+                           a_2 & b_2 & c_2 &\dots &\dots &\dots \\
+                           & a_3 & b_3 & c_3 & \dots & \dots \\
+                           & \dots   & \dots &\dots   &\dots & \dots \\
+                           &   &  &a_{n-2}  &b_{n-1}& c_{n-1} \\
+                           &    &  &   &a_n & b_n \\
+                      \end{array} \right)\left(\begin{array}{c}
+                           v_1\\
+                           v_2\\
+                           \dots \\
+                          \dots  \\
+                          \dots \\
+                           v_n\\
+                      \end{array} \right)
+  =\left(\begin{array}{c}
+                           \tilde{b}_1\\
+                           \tilde{b}_2\\
+                           \dots \\
+                           \dots \\
+                          \dots \\
+                           \tilde{b}_n\\
+                      \end{array} \right).
+\end{equation}
+
+\noindent which can be written as:
+\begin{equation}
+  a_iv_{i-1}+b_iv_i+c_iv_{i+1} = \tilde{b}_i
+\end{equation}
+
+\noindent for $i=1,2,\dots,n$. The algorithm for solving this equation can be stated as follows:\\
+
+(algorithm)
 
 
 
 \subsection{Using a library package}
-In addition to solving the linear second-order differential equation Eq. XX using the simple algorithm described above, we want to solve the equation using Gaussian elimination and LU decomposition, then compare the results.
+In addition to solving the linear second-order differential equation Eq.~\ref{eq:Poisson} using the simple algorithm described above, we want to solve the equation using Gaussian elimination and LU decomposition, then compare the results.
 
-MORE COMING HERE.
+More coming here.
 
 
 
-\section{Analaysis}    \label{sec:analysis}
-The modeling of \dots
+\section{Analysis}    \label{sec:analysis}
+\dots
 
 
 \section{Conclusions} \label{sec:conclusions}
-The answer is 42.
+\dots
 
 
 
-\begin{acknowledgements}
-  We are much indebted to Rob Rutten for exemplary instruction.
-  Our research made much use of NASA's Astrophysics Data System.
-\end{acknowledgements}
-
-
-
-%% references
-\bibliographystyle{aa-note} % aa.bst but adding links and notes to references
-%%\raggedright              %% only for adsaa with dvips, not for pdflatex
-\bibliography{XXX}          %% XXX.bib = your Bibtex entries copied from ADS
 
 \end{document}
 
