@@ -103,7 +103,7 @@ In our case we are dealing with a simple tridiagonal matrix. We can therefore re
   a_iv_{i-1}+b_iv_i+c_iv_{i+1} = \tilde{b}_i
 \end{equation}
 
-\noindent for $i=1,2,\dots,n$. We want to find a simple algorithm to solve this set of equations. To do this, we can rewrite Eq.~\ref{eq:tridiagonal_system} by a method of elimination, which will lead to a system where there is only one unknown. The idea is to subtract one row with a scalar multiple of another.
+\noindent for $i=1,2,\dots,n$. We want to find a simple algorithm to solve this set of equations. To do this, we can rewrite Eq.~\ref{eq:tridiagonal_system} by a method of elimination, which will lead to a system where there is only one unknown. 
 
 The first thing to do is to realize that Eq.~\ref{eq:tridiagonal_system} gives a system of three equations:
 
@@ -114,7 +114,11 @@ The first thing to do is to realize that Eq.~\ref{eq:tridiagonal_system} gives a
 \end{align}
 
 
-\noindent where the boundary conditions have been applied to simplify the equation. \\
+\noindent where the boundary conditions have been applied to simplify the equations. The idea now is to subtract one row with a scalar multiple of another to eliminate variables. First we want to eliminate $v_1$:\\
+
+(something)\\
+
+\noindent Then we can follow the same approac to eliminate $v_2$:\\
 
 (something)\\
 
@@ -131,8 +135,16 @@ More coming here.
 
 
 
+
 \section{Analysis}    \label{sec:analysis}
+\subsection{\dots}
 \dots
+
+\subsection{Number of floating point operations}
+Some of the methods described above may be more computationally heavy for a computer to do than others. One way to evaluate this is to calculate the precise number of floating point operations ("FLOPS") needed to solve the equations.
+
+For Eq.~\ref{eq:tridiagonal_system} we have that: FLOPS = $2 n^3$. For Gaussian elimination we have XXX and for LU decomposition XXX. 
+
 
 
 \section{Conclusions} \label{sec:conclusions}
