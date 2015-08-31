@@ -31,15 +31,35 @@ int main()
     int n;
     double h = 1./(n+1);
 
+
+    // Define a, b, c
+    // ...
+
+
+    // SIMPLE ALGORITHM
+    // Forward substitution:
+    btemp = b[1];
+    u[1] = f[1]/btemp;
+    for(i=2; i <= n; i++) {
+        temp[i] = c[i-1]/btemp;
+        btemp = b[i]-a[i]*temp[i];
+        u[i] = (f[i] - a[i]*u[i-1])/btemp;
+    }
+
+    // Backward substitution:
+    for(i=n-1; i >= 1; i--) {
+        u[i] -= temp[i+1]*u[i+1];
+    }
+
     // GAUSSIAN
-    // …
+    // ...
 
     // LU DECOMP: use lib.cpp function: void ludcmp(double **a, int n, int *indx, double *d)
     // Solve linear equation using LU decomposition with function: void lubksb(double **a, int n, int *indx, double *b)
-    // …
+    // ...
 
     // ERROR
-    // …
+    // ...
 
 
     // END CODE
