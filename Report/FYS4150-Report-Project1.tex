@@ -1,31 +1,39 @@
-\documentclass{aa} 
+\documentclass{article}
 
-\usepackage{graphicx}
-\usepackage[varg]{txfonts}
+\usepackage[margin=0.5in,bottom=1in]{geometry}
+
 \usepackage{amsmath}
 
-\pagestyle{plain}
-\newcommand\numberthis{\addtocounter{equation}{1}\tag{\theequation}}
+\usepackage{multicol}
+\setlength{\columnsep}{1cm}
 
-\begin{document}  
+\usepackage{lipsum}% for dummy text
+\usepackage[varg]{txfonts}
+\usepackage{graphicx}
+\usepackage{subcaption}
 
-\twocolumn[{
-\begin{center}
-  {\Large \bf FYS4150 Project 1: \\1-dimensional Poisson equation}\\[4ex]       
-  {\large \bf Marie Foss$^{1}$, 
-              Maria Hammerstr{{\o}}m$^{1}$}\\[4ex]
-  \begin{minipage}[t]{15cm}
-        $^1$ Institute of Theoretical Astrophysics, University of Oslo\\
+\usepackage{titlesec}
+\titleformat{\section}{\fontfamily{phv}\fontsize{12}{15}\bfseries}{\thesection}{1em}{}
+\titleformat{\subsection}{\fontfamily{phv}\fontsize{10}{15}\itshape}{\thesubsection}{1em}{}
 
-  {\bf Abstract:}  We discovered \ldots 
+\title{\textbf{FYS4150 Project 1: \\1-dimensional Poisson equation}}
+\author{Marie Foss, Maria Hammerstr{{\o}}m}
+\date{} % removes date from title
 
-  \vspace*{2ex}
-  \end{minipage}
-\end{center}
-}] 
+\begin{document}
+
+\maketitle
+
+\begin{abstract}
+	\noindent \lipsum[1] 
+	\vspace*{2ex}
+\end{abstract}
 
 
-\section{Introduction}\label{sec:introduction}
+
+\begin{multicols}{2}
+
+\section{Introduction}
 In this project we will solve the one-dimensional Poissson equation with Dirichlet boundary conditions by rewriting it as a set of linear equations and solving these numerically in a program written in C++.The equation to be solved is:
 
 \begin{equation}\label{eq:Poisson}
@@ -150,8 +158,6 @@ For Eq.~\ref{eq:tridiagonal_system} we have that: FLOPS = $2 n^3$. For Gaussian 
 \section{Conclusions} \label{sec:conclusions}
 \dots
 
-
-
+\end{multicols}
 
 \end{document}
-
