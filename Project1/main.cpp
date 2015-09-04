@@ -12,7 +12,7 @@ using namespace std;
 //using namespace arma;
 
 // Functions
-double u(double x)
+double u_sol(double x)
 {
     return 1 - (1 - exp(-10))*x - exp(-10*x);
 }
@@ -38,6 +38,19 @@ int main()
     // ...
 
 
+    //n = 10;
+    int A[n][n];
+    for(i=0 ; i<n ; i++){
+        for(j=0 ; j<n ; j++){
+            if(j==i)
+                A[i][j] = 2;
+            else if(j == i+1 || j == i-1)
+                A[i][j] = -1;
+            else
+                A[i][j] = 0;
+        }
+    }
+
     // SIMPLE ALGORITHM
     // Forward substitution:
     btemp = b[1];
@@ -53,18 +66,7 @@ int main()
         u[i] -= temp[i+1]*u[i+1];
     }
 
-    //n = 10;
-    int A[n][n];
-    for(i=0 ; i<n ; i++){
-        for(j=0 ; j<n ; j++){
-            if(j==i)
-                A[i][j] = 2;
-            else if(j == i+1 || j == i-1)
-                A[i][j] = -1;
-            else
-                A[i][j] = 0;
-        }
-    }
+
 
     // GAUSSIAN
     // ...
