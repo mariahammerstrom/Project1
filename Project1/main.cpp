@@ -6,6 +6,7 @@
 #include <time.h>
 #include <math.h>
 #include "lib.h"
+//#include <armadillo>
 
 using namespace std;
 //using namespace arma;
