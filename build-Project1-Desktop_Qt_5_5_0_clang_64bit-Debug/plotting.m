@@ -1,6 +1,6 @@
 % Plot data from C++
 
-n = 1000;
+n = 10000;
 
 % ANALYTIC SOLUTION
 filename = sprintf('Project1_analytic_solution_n%d.txt',n);
