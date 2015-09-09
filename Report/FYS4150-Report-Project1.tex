@@ -47,9 +47,7 @@ In this project we will solve the one-dimensional Poissson equation with Dirichl
    -\frac{v_{i+1}+v_{i-1}-2v_i}{h^2} = f_i  \hspace{0.5cm} \mathrm{for} \hspace{0.1cm} i=1,\dots, n,
 \end{equation}
 
-\noindent where $f_i=f(x_i)$. \\
-
-\noindent Eq. (\ref{eq:second_derivative}) can be written as a linear set of equations of the form: 
+\noindent where $f_i=f(x_i)$. Eq. (\ref{eq:second_derivative}) can be written as a linear set of equations of the form: 
 
 \begin{equation}
 	{\bf A}{\bf v} = \tilde{{\bf b}}
@@ -76,9 +74,9 @@ In this project we will solve the one-dimensional Poissson equation with Dirichl
 	... \\
 	-v_{i-1} + 2v_n - v_{i+1} &= \tilde{b}_i,
 \end{align}
-which is the same as equations (\ref{eq:second_derivative}).
+which is the same as Eq. (\ref{eq:second_derivative}). 
 
-\noindent We will assume that the source term is $f(x) = 100e^{-10x}$. Using the interval and boundary conditions as stated above, the above differential equation has a closed-form  solution given by $u(x) = 1-(1-e^{-10})x-e^{-10x}$. We will compare our numerical solution with this result. 
+We will assume that the source term is $f(x) = 100e^{-10x}$. Using the interval and boundary conditions as stated above, the above differential equation has a closed-form  solution given by $u(x) = 1-(1-e^{-10})x-e^{-10x}$. We will compare our numerical solution with this result. 
 
 
 
@@ -148,7 +146,7 @@ The first thing to do is to realize that Eq.~\ref{eq:tridiagonal_system} gives a
 \subsection{LU decomposition}
 In addition to solving the linear second-order differential equation Eq.~\ref{eq:Poisson} using the simple algorithm described above, we want to solve the equation using LU decomposition, then compare the results. For this we will use the provided \verb@lib.cpp@ library.
 
-(More coming here!!)
+(More coming here about what LU decomposition is!!)
 
 
 
@@ -199,12 +197,16 @@ The relative error in the data set is computed by calculating:
 \end{tabular}
 \end{center}
 
+\begin{center}
+Table 1: Maximum error as a function of step length.
+\end{center}
+
 \subsection{Number of floating point operations and time usage}
 Some of the methods described above may be more computationally heavy for a computer to do than others. One way to evaluate this is to calculate the precise number of floating point operations ("FLOPS") needed to solve the equations.
 
 Gaussian elimination requires $\frac{2}{3}n^3 + O(n^2)$ FLOPS and LU decomposition requires $O(n^3)$. By counting the floating point operations in our code, we find that for our tridiagonal system, $8n + 1$ FLOPS are required. 
 
-The number of floating point operations and time usage in the different cases, are shown in the table below:
+The number of floating point operations and time usage in the different cases, are shown in the table below.
 
 
 \begin{center}
@@ -229,6 +231,10 @@ The number of floating point operations and time usage in the different cases, a
 								& 100 000			& XX 			& XX \\
     \hline
     \end{tabular}
+\end{center}
+
+\begin{center}
+Table 2: The number of floating point operations and time usage by method.
 \end{center}
 
 
