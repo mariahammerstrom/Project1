@@ -191,7 +191,7 @@ The relative error in the data set is computed by calculating:
 
 \begin{center}
 \begin{tabular}{ l l }\hline
-	$n$ 		&Maximum error \\ \hline
+	$n$ 		&Maximum error (log$_{10}$) \\ \hline
 	10 		& 1.18895 \\
 	$10^2$  	& 1.03632 \\
 	$10^3$ 	& 1.00786 \\
@@ -209,7 +209,7 @@ Some of the methods described above may be more computationally heavy for a comp
 
 Gaussian elimination requires $\frac{2}{3}n^3 + O(n^2)$ FLOPS and LU decomposition requires $O(n^3)$. By counting the floating point operations in our code, we find that for our tridiagonal system, $8n + 1$ FLOPS are required. 
 
-The number of floating point operations and time usage in the different cases, are shown in the table below.
+The number of floating point operations and time usage in the different cases, are shown in the table below. A brute force Gaussian elimination is not used in the code in this project, and therefore has no values for time usage.
 
 
 \begin{center}
@@ -244,6 +244,10 @@ We ran our code with $n$ ranging from 10 to $10^4$. Due to the amount of time it
 In Fig.~\ref{fig:n-values} the results for the different $n$-values are shown. For $n = 10$ the result is way off for the LU decomposition, while the other two solutions are relatively close to each other. By only increasing $n$ by a factor of 10 the results improve significantly. The analytical solution and the solution of the simple algorithm are close to the same, while the result from the LU decomposition is lagging behind. Finally at $n = 10^3$ does all the three different methods align quite nicely, with the LU decomposition still slightly off. 
 
 If we look at this development with regards to computing time as well, shown in Table 2, we see that the computing time for the simple algorithm for our special case of a tridiagonal matrix, does not care about the increasing value of $n$, while the LU decomposition goes rapidly slower as $n$ is increased. Adding this to the fact that the result from the LU decomposition is not very impressive, the simple algorithm is a highly preferred method to use in this case.
+
+If we review the results of the error analysis shown in Table 1, we see that the result is as expected: The error decreases as $n$ increases. For the largest value of $n$, the error is about zero (non-log scale).
+
+(Comment on FLOPS!!)
 
 \end{multicols}
 
