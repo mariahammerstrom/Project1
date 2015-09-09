@@ -1,6 +1,8 @@
 % Plot data from C++
+n = 10;
 
-filename = 'Project1_analytic_solution.txt';
+filename = sprintf('Project1_analytic_solution_n%d.txt', n);
+filename = 'Project1_analytic_solution_n10.txt';
 
 % Get N value by reading first line only:
 [~,~,N] = textread(filename,'%f %f %f',1);
@@ -12,7 +14,7 @@ filename = 'Project1_analytic_solution.txt';
 
 
 
-filename = 'Project1_simple_algorithm.txt';
+filename = 'Project1_simple_algorithm_n10.txt';
 
 % Get N value by reading first line only:
 [~,~,N] = textread(filename,'%f %f %f',1);
@@ -20,14 +22,29 @@ filename = 'Project1_simple_algorithm.txt';
 % Get all values:
 [x2,y2,N] = textread(filename,'%f %f %f',N);
 
+
+
+
+
+
+filename = 'Project1_LU_decomp_n10.txt';
+
+% Get N value by reading first line only:
+[~,~,N] = textread(filename,'%f %f %f',1);
+
+% Get all values:
+[x3,y3,N] = textread(filename,'%f %f %f',N);
+
+
+
+
 % Regular plot:
 figure
-plot(x,y,fliplr(x2),fliplr(y2))
+plot(x,y,fliplr(x2),fliplr(y2),x3,y3)
 xlabel('x')
 ylabel('u(x)')
 title('Solution to 1D Poisson equation')
-legend('Analytic solution','Numerical solution')
-
+legend('Analytic solution','Numerical solution','LU decomposition')
 
 
 % Log-log plot:
