@@ -1,6 +1,6 @@
 % Plot data from C++
 
-n = 10;
+n = 1000;
 
 % ANALYTIC SOLUTION
 filename = sprintf('Project1_analytic_solution_n%d.txt',n);
@@ -21,7 +21,7 @@ filename = sprintf('Project1_LU_decomp_n%d.txt',n);
 figure;
 plot(x,y,fliplr(x2),fliplr(y2),x3,y3);
 xlabel('x');
-ylabel('u(x)');
+ylabel('y(x)');
 title(sprintf('Solution to 1D Poisson equation, n = %d',n));
 legend('Analytic solution','Numerical solution','LU decomposition');
 print(sprintf('Plot_n%d',n),'-dpng');
