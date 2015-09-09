@@ -24,7 +24,7 @@ xlabel('x');
 ylabel('u(x)');
 title(sprintf('Solution to 1D Poisson equation, n = %d',n));
 legend('Analytic solution','Numerical solution','LU decomposition');
-print(sprintf('Plot_comparison_n%d',n),'-dpng');
+print(sprintf('Plot_n%d',n),'-dpng');
 
 
 % Log-log plot:
