@@ -190,8 +190,18 @@ The relative error in the data set is computed by calculating:
 
 \noindent for $i = 1, \dots, n$ for the function values $u_i$ and $v_i$, where $u_i$ represents the closed-form analytical solution, while $v_i$ is the numerical solution given by the simple algorithm described above. The relative error will be a function of $log_{10}(h)$. For each step length $h$ we want to extract the max value of the relative error. Doing this while increasing $n$ to $n=10000$ and $n=10^5$, gives the following results:
 
-(Table!!)
-
+\begin{center}
+\begin{tabular}{ l l }\hline
+	$n$ &Maximum error \\
+	\hline
+	10 &XX \\
+	100 &XX \\
+	10^3 &XX \\
+	10^4 &XX \\
+	10^5 &XX\\
+	\hline
+\end{tabular}
+\end{center}
 
 \subsection{Number of floating point operations and time usage}
 Some of the methods described above may be more computationally heavy for a computer to do than others. One way to evaluate this is to calculate the precise number of floating point operations ("FLOPS") needed to solve the equations.
@@ -202,23 +212,23 @@ The number of floating point operations and time usage in the different cases, a
 
 
 \begin{center}
-    \begin{tabular}{| l | l | l | l |} \hline
-    \textbf{Method} 					&\textbf{\textit{n}} 	&\textbf{FLOPS} 	&\textbf{Time \textit{(s)}} \\ \hline
-    \multirow{4}{*}{Simple algortihm} 		& XX 			& XX				& XX \\ 
-    								& XX 			& XX 			& XX \\
-    								& XX				& XX 			& XX \\ 
-								& XX				& XX 			& XX \\ \hline
-								
-    \multirow{4}{*}{Gaussian elimination} 	& XX 			& XX				& XX \\ 
-    								& XX 			& XX 			& XX \\
-    								& XX				& XX 			& XX \\ 
-								& XX				& XX 			& XX \\ \hline
-
-    \multirow{4}{*}{LU decomposition} 		& XX 			& XX				& XX \\ 
-    								& XX 			& XX 			& XX \\
-    								& XX				& XX 			& XX \\ 
-								& XX				& XX 			& XX \\ \hline
-																
+    \begin{tabular}{ l  l  l  l } \hline
+    \textbf{Method} 	&\textbf{\textit{n}} 	&\textbf{FLOPS} 	&\textbf{Time \textit{(s)}} \\ \hline
+    \multirow{4}{*}{Simple algortihm} 	& 10 	& XX	& XX \\ 
+    					& 100 	& XX 	& XX \\
+    					& 1000	& XX 	& XX \\ 
+					& XX	& XX 	& XX \\
+    \hline
+    \multirow{4}{*}{Gaussian elimination} 	& 10	& XX	& XX \\ 
+    						& 100 	& XX	& XX \\
+    						& 1000	& XX 	& XX \\ 
+						& XX	& XX 	& XX \\ 
+    \hline
+    \multirow{4}{*}{LU decomposition} 	& 10	& XX	& XX \\ 
+    					& 100	& XX	& XX \\
+    					& 1000	& XX	& XX \\ 
+					& XX	& XX	& XX \\ 
+    \hline
     \end{tabular}
 \end{center}
 
