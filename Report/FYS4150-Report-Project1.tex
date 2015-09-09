@@ -37,26 +37,19 @@
 \section{Introduction}
 In this project we will solve the one-dimensional Poissson equation with Dirichlet boundary conditions by rewriting it as a set of linear equations and solving these numerically in a program written in C++ \footnote{All files associated with the project are located at: https://github.com/mariahammerstrom/Project1}. The C++ program is accompanied by a MATLAB script which plots the results. 
 
-The equation to be solved is:
-
+The equation to be solved is
 \begin{equation}\label{eq:Poisson}
-	-u''(x) = f(x) \hspace{0.5cm} x\in(0,1), \hspace{0.5cm} u(0) = u(1) = 0
+	-u''(x) = f(x) \hspace{0.5cm} x\in(0,1), \hspace{0.5cm} u(0) = u(1) = 0.
 \end{equation}
-
-\noindent and we define the discretized approximation  to $u$ as $v_i$  with grid points $x_i=ih$   in the interval from $x_0=0$ to $x_{n+1}=1$. The step length or spacing is defined as $h=1/(n+1)$. We then have the boundary conditions $v_0 = v_{n+1} = 0$. We can approximate the second derivative of $u$ with:
-
+We define the discretized approximation to $u$ as $v_i$  with grid points $x_i=ih$ in the interval from $x_0=0$ to $x_{n+1}=1$. The step length or spacing is defined as $h=1/(n+1)$, and the boundary conditions are $v_0 = v_{n+1} = 0$. The second derivative of $u$ can be approximated to be
 \begin{equation}\label{eq:second_derivative}
    -\frac{v_{i+1}+v_{i-1}-2v_i}{h^2} = f_i  \hspace{0.5cm} \mathrm{for} \hspace{0.1cm} i=1,\dots, n,
 \end{equation}
-
-\noindent where $f_i=f(x_i)$. Eq. (\ref{eq:second_derivative}) can be written as a linear set of equations of the form: 
-
+where $f_i=f(x_i)$. Eq. (\ref{eq:second_derivative}) can be written as a linear set of equations of the form: 
 \begin{equation}
-	{\bf A}{\bf v} = \tilde{{\bf b}}
+	{\bf A}{\bf v} = \tilde{{\bf b}},
 \end{equation}
-
-\noindent where $\tilde{b}_i=h^2f_i$ and \textbf{A} is an $n\times n$ matrix of the form:
-
+where $\tilde{b}_i=h^2f_i$ and \textbf{A} is an $n\times n$ matrix of the form:
 \begin{equation}
     {\bf A} = \left(\begin{array}{cccccc}
                            2& -1& 0 &\dots   & \dots &0 \\
@@ -67,8 +60,7 @@ The equation to be solved is:
                            0&\dots    &  & 0  &-1 & 2 \\
                       \end{array} \right)
 \end{equation}
-
-\noindent This can be shown by writing it out. We then get
+This can be shown by writing it out. We then get
 \begin{align*}
 	2v_1 - v_2 &= \tilde{b}_1 \\
 	-v_1 + 2v_2 - v_3 &= \tilde{b}_2 \\
@@ -86,8 +78,7 @@ We will assume that the source term is $f(x) = 100e^{-10x}$. Using the interval 
 
 \section{Methods}
 \subsection{Simple algorithm}
-In our case we are dealing with a simple tridiagonal matrix. We can therefore rewrite our matrix \textbf{A} in terms of one-dimensional vectors \textit{a, b, c} of length 1:\textit{n}. The linear equation then reads:
-
+In our case we are dealing with a simple tridiagonal matrix. We can therefore rewrite our matrix \textbf{A} in terms of one-dimensional vectors \textit{a, b, c} of length 1:\textit{n}. The linear equation then reads
 \begin{equation}
     {\bf A} = \left(\begin{array}{cccccc}
                            b_1& c_1 & 0 &\dots   & \dots &\dots \\
@@ -113,40 +104,33 @@ In our case we are dealing with a simple tridiagonal matrix. We can therefore re
                            \tilde{b}_n\\
                       \end{array} \right).
 \end{equation}
-
-\noindent which can be written as:
-
+This can be written as
 \begin{equation}\label{eq:tridiagonal_system}
   a_iv_{i-1}+b_iv_i+c_iv_{i+1} = \tilde{b}_i
 \end{equation}
+for $i=1,2,\dots,n$. We want to find a simple algorithm to solve this set of equations. To do this, we can rewrite Eq. (\ref{eq:tridiagonal_system}) by a method of elimination, which will lead to a system where there is only one unknown. 
 
-\noindent for $i=1,2,\dots,n$. We want to find a simple algorithm to solve this set of equations. To do this, we can rewrite Eq.~\ref{eq:tridiagonal_system} by a method of elimination, which will lead to a system where there is only one unknown. 
-
-The first thing to do is to realize that Eq.~\ref{eq:tridiagonal_system} gives a system of three equations:
-
+The first thing to do is to realize that Eq. (\ref{eq:tridiagonal_system}) gives a system of three equations,
 \begin{align}
 	b_1 v_1 + c_1 v_2 &= \tilde{b}_1, \hspace{0.5cm} i = 1  \\
 	a_i v_{i-1} + b_i v_i + c_i v_{i+1} &= \tilde{b}_i, \hspace{0.5cm} i = 2, \dots, n - 1 \\
-	a_n v_{n-1} + b_n v_n &= \tilde{b}_n, \hspace{0.5cm} i = n  
+	a_n v_{n-1} + b_n v_n &= \tilde{b}_n, \hspace{0.5cm} i = n  ,
 \end{align}
-
-
-\noindent where the boundary conditions have been applied to simplify the equations. The idea now is to subtract one row with a scalar multiple of another to eliminate variables. First we want to eliminate $v_1$:\\
-
+where the boundary conditions have been applied to simplify the equations. The idea now is to subtract one row with a scalar multiple of another to eliminate variables. First we want to eliminate $v_1$, this can be done by dividing the first equation by $b_i$, which gives
 \begin{equation}
-	v_1 = \tilde{b}_1/b_1 - \frac{c_1}{b_1}v_2
+	v_1 = \tilde{b}_1/b_1 - \frac{c_1}{b_1}v_2.
 \end{equation}
-Then we can follow the same approach to eliminate $v_i$ by dividing each equation by $b_i$:\\
+Then we can follow the same approach to eliminate $v_i$ by dividing each equation by $b_i$,\\
 \begin{equation}
-	v_i = \tilde{b}_i/b_i - \frac{a_i}{b_i}v_{i-1} - \frac{c_i}{b_i}v_{i+1},
+	v_i = \tilde{b}_i/b_i - \frac{a_i}{b_i}v_{i-1} - \frac{c_i}{b_i}v_{i+1}
 \end{equation}
-Trying to insert $v_{i-1}$ can proove to be difficult. After some algebra one finds that 
+Trying to insert $v_{i-1}$ into the equations for $v_i$ can proove to be difficult. After some algebra one finds that 
 \begin{equation}\label{eq:fsi}
 	v_i = \left( \tilde{b}_i - a_iv_{i-1} - c_iv_{i+1} \right)/\left( b_i - \frac{a_ic_{i-1}}{d_{i-1}} \right),
 \end{equation}
 where $d_{i-1} =  b_{i-1} - a_{i-1}c_{i-2}/d_{i-2}$, and $d_{2} = b_2 - a_2c_1/b_1$.
 We then have an equation for each $v_n$, and can start going back. This is 
-done with a backward substitution. As we see from equation (\ref{eq:fsi}), we have to add a term $-c_iv_{i+1}/d_i$.
+done with a backward substitution. As we see from eq. (\ref{eq:fsi}), we have to add a term $-c_iv_{i+1}/d_i$.
 A pseudocode for solving this set of equations is given as
 \begin{center} % LaTeX has an algorithm function, but not sure how it works
 v[1] = f[1]/b[1]
@@ -163,13 +147,11 @@ for i from n-1 down to 1
 
 
 \subsection{LU decomposition}
-In addition to solving the linear second-order differential equation Eq.~\ref{eq:Poisson} using the simple algorithm described above, we want to solve the equation using LU decomposition, then compare the results. Doing an LU decomposition, means rewriting matrix {\bf A} as a product of a lower triangular matrix {\bf L} and an upper triangular matrix {\bf U}, so that:
-
+In addition to solving the linear second-order differential equation Eq.~\ref{eq:Poisson} using the simple algorithm described above, we want to solve the equation using LU decomposition, then compare the results. Doing an LU decomposition, means rewriting matrix {\bf A} as a product of a lower triangular matrix {\bf L} and an upper triangular matrix {\bf U}, so that
 \begin{equation*}
-	{\bf A} = {\bf L}{\bf U}
+	{\bf A} = {\bf L}{\bf U}.
 \end{equation*}
-
-\noindent For the LU decomposition we will use the provided \verb@lib.cpp@ library.
+For the LU decomposition we will use the provided \verb@lib.cpp@ library.
 
 
 
@@ -199,14 +181,12 @@ We can run our code for different values of $n$ and plot the analytical and nume
 
 \subsection{Relative errors}
 
-The relative error in the data set is computed by calculating:
-
+The relative error in the data set is computed by calculating
 \begin{equation}
    \epsilon_i=log_{10}\left(\left|\frac{v_i-u_i}
                  {u_i}\right|\right),
 \end{equation}
-
-\noindent for $i = 1, \dots, n$ for the function values $u_i$ and $v_i$, where $u_i$ represents the closed-form analytical solution, while $v_i$ is the numerical solution given by the simple algorithm described above. The relative error will be a function of $log_{10}(h)$. For each step length $h$ we want to extract the max value of the relative error. Doing this while increasing $n$ to $n=10000$ and $n=10^5$, gives the following results:
+for $i = 1, \dots, n$ for the function values $u_i$ and $v_i$, where $u_i$ represents the closed-form analytical solution, while $v_i$ is the numerical solution given by the simple algorithm described above. The relative error will be a function of $log_{10}(h)$. For each step length $h$ we want to extract the max value of the relative error. Doing this while increasing $n$ to $n=10000$ and $n=10^5$, gives the following results:
 
 \begin{center}
 \begin{tabular}{ l l }\hline
