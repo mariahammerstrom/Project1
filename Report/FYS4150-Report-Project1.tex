@@ -1,6 +1,6 @@
 \documentclass{article}
 
-\usepackage[margin=0.5in,bottom=1in]{geometry}
+\usepackage[margin=0.5in,bottom=1in,footnotesep=1in]{geometry}
 
 \usepackage{amsmath}
 
@@ -35,7 +35,9 @@
 \begin{multicols}{2}
 
 \section{Introduction}
-In this project we will solve the one-dimensional Poissson equation with Dirichlet boundary conditions by rewriting it as a set of linear equations and solving these numerically in a program written in C++.The equation to be solved is:
+In this project we will solve the one-dimensional Poissson equation with Dirichlet boundary conditions by rewriting it as a set of linear equations and solving these numerically in a program written in C++ \footnote{All files associated with the project are located at: https://github.com/mariahammerstrom/Project1}. The C++ program is accompanied by a MATLAB script which plots the results. 
+
+The equation to be solved is:
 
 \begin{equation}\label{eq:Poisson}
 	-u''(x) = f(x) \hspace{0.5cm} x\in(0,1), \hspace{0.5cm} u(0) = u(1) = 0
@@ -142,6 +144,8 @@ The first thing to do is to realize that Eq.~\ref{eq:tridiagonal_system} gives a
 (algorithm)\\
 
 \noindent The algorithm used in our code is given on p. 186 in the lecture notes.
+
+
 
 \subsection{LU decomposition}
 In addition to solving the linear second-order differential equation Eq.~\ref{eq:Poisson} using the simple algorithm described above, we want to solve the equation using LU decomposition, then compare the results. Doing an LU decomposition, means rewriting matrix {\bf A} as a product of a lower triangular matrix {\bf L} and an upper triangular matrix {\bf U}, so that:

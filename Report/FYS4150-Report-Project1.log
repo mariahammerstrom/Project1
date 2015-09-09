@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2014.7.15)  9 SEP 2015 15:20
+This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2014.7.15)  9 SEP 2015 15:29
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -374,7 +374,7 @@ File: ot1txr.fd 2000/12/15 v3.1
 * \marginparwidth=65.0pt
 * \marginparsep=11.0pt
 * \columnsep=28.45274pt
-* \skip\footins=9.0pt plus 4.0pt minus 2.0pt
+* \skip\footins=72.26999pt
 * \hoffset=0.0pt
 * \voffset=0.0pt
 * \mag=1000
@@ -470,16 +470,29 @@ File: ot1phv.fd 2001/06/04 scalable font definitions for OT1/phv.
 )
 LaTeX Font Info:    Font shape `OT1/phv/bx/n' in size <12> not available
 (Font)              Font shape `OT1/phv/b/n' tried instead on input line 37.
+
+
+LaTeX Warning: Reference `eq:second_derivative' on page 1 undefined on input li
+ne 52.
+
+
+LaTeX Warning: Reference `eq:second_derivative' on page 1 undefined on input li
+ne 79.
+
 LaTeX Font Info:    Font shape `OT1/phv/m/it' in size <10> not available
-(Font)              Font shape `OT1/phv/m/sl' tried instead on input line 86.
-
-Underfull \hbox (badness 10000) in paragraph at lines 132--133
-
- []
-
+(Font)              Font shape `OT1/phv/m/sl' tried instead on input line 88.
 [1
 
 {/usr/local/texlive/2014/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
+
+LaTeX Warning: Reference `eq:tridiagonal_system' on page 2 undefined on input l
+ine 123.
+
+
+LaTeX Warning: Reference `eq:tridiagonal_system' on page 2 undefined on input l
+ine 125.
+
+
 Underfull \hbox (badness 10000) in paragraph at lines 134--135
 
  []
@@ -504,11 +517,23 @@ Underfull \hbox (badness 10000) in paragraph at lines 142--143
 
  []
 
-LaTeX Font Info:    Try loading font information for OT1+txtt on input line 153
+
+Underfull \hbox (badness 10000) in paragraph at lines 144--145
+
+ []
+
+
+LaTeX Warning: Reference `eq:Poisson' on page 2 undefined on input line 151.
+
+LaTeX Font Info:    Try loading font information for OT1+txtt on input line 157
 .
 (/usr/local/texlive/2014/texmf-dist/tex/latex/txfonts/ot1txtt.fd
 File: ot1txtt.fd 2000/12/15 v3.1
 )
+
+LaTeX Warning: Reference `fig:n-values' on page 2 undefined on input line 165.
+
+
 <../build-Project1-Desktop_Qt_5_5_0_clang_64bit-Debug/Plot_n10.png, id=15, 578.
 16pt x 433.62pt>
 File: ../build-Project1-Desktop_Qt_5_5_0_clang_64bit-Debug/Plot_n10.png Graphic
@@ -516,7 +541,7 @@ File: ../build-Project1-Desktop_Qt_5_5_0_clang_64bit-Debug/Plot_n10.png Graphic
 
 <use ../build-Project1-Desktop_Qt_5_5_0_clang_64bit-Debug/Plot_n10.png>
 Package pdftex.def Info: ../build-Project1-Desktop_Qt_5_5_0_clang_64bit-Debug/P
-lot_n10.png used on input line 166.
+lot_n10.png used on input line 170.
 (pdftex.def)             Requested size: 256.0748pt x 192.05052pt.
 
 <../build-Project1-Desktop_Qt_5_5_0_clang_64bit-Debug/Plot_n100.png, id=16, 578
@@ -526,7 +551,7 @@ c file (type png)
 
 <use ../build-Project1-Desktop_Qt_5_5_0_clang_64bit-Debug/Plot_n100.png>
 Package pdftex.def Info: ../build-Project1-Desktop_Qt_5_5_0_clang_64bit-Debug/P
-lot_n100.png used on input line 167.
+lot_n100.png used on input line 171.
 (pdftex.def)             Requested size: 256.0748pt x 192.05052pt.
 
 <../build-Project1-Desktop_Qt_5_5_0_clang_64bit-Debug/Plot_n1000.png, id=17, 57
@@ -536,41 +561,50 @@ ic file (type png)
 
 <use ../build-Project1-Desktop_Qt_5_5_0_clang_64bit-Debug/Plot_n1000.png>
 Package pdftex.def Info: ../build-Project1-Desktop_Qt_5_5_0_clang_64bit-Debug/P
-lot_n1000.png used on input line 171.
+lot_n1000.png used on input line 175.
 (pdftex.def)             Requested size: 256.0748pt x 192.05052pt.
 File: ../build-Project1-Desktop_Qt_5_5_0_clang_64bit-Debug/Plot_n1000.png Graph
 ic file (type png)
 
 <use ../build-Project1-Desktop_Qt_5_5_0_clang_64bit-Debug/Plot_n1000.png>
 Package pdftex.def Info: ../build-Project1-Desktop_Qt_5_5_0_clang_64bit-Debug/P
-lot_n1000.png used on input line 172.
+lot_n1000.png used on input line 176.
 (pdftex.def)             Requested size: 256.0748pt x 192.05052pt.
+
+
+LaTeX Warning: Reference `fig:n-values' on page 2 undefined on input line 248.
 
 [2] [3 <../build-Project1-Desktop_Qt_5_5_0_clang_64bit-Debug/Plot_n10.png (PNG 
 copy)> <../build-Project1-Desktop_Qt_5_5_0_clang_64bit-Debug/Plot_n100.png (PNG
  copy)> <../build-Project1-Desktop_Qt_5_5_0_clang_64bit-Debug/Plot_n1000.png (P
-NG copy)>] [4] (./FYS4150-Report-Project1.aux) ) 
+NG copy)>] [4] (./FYS4150-Report-Project1.aux)
+
+LaTeX Warning: There were undefined references.
+
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
+ ) 
 Here is how much of TeX's memory you used:
- 5097 strings out of 493117
- 73904 string characters out of 6135433
- 241927 words of memory out of 5000000
+ 5101 strings out of 493117
+ 73926 string characters out of 6135433
+ 239915 words of memory out of 5000000
  8450 multiletter control sequences out of 15000+600000
- 45655 words of font info for 108 fonts, out of 8000000 for 9000
+ 48287 words of font info for 112 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 42i,11n,40p,601b,506s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/local/texlive/2014/texmf-
-dist/fonts/enc/dvips/base/8r.enc}</usr/local/texlive/2014/texmf-dist/fonts/type
-1/public/txfonts/rtxmi.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/publ
-ic/txfonts/rtxr.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/public/txfo
-nts/txex.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/public/txfonts/txs
-y.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/public/txfonts/txtt.pfb><
-/usr/local/texlive/2014/texmf-dist/fonts/type1/urw/helvetic/uhvb8a.pfb></usr/lo
-cal/texlive/2014/texmf-dist/fonts/type1/urw/helvetic/uhvro8a.pfb></usr/local/te
-xlive/2014/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/local/texlive/2014
-/texmf-dist/fonts/type1/urw/times/utmbi8a.pfb></usr/local/texlive/2014/texmf-di
-st/fonts/type1/urw/times/utmr8a.pfb></usr/local/texlive/2014/texmf-dist/fonts/t
-ype1/urw/times/utmri8a.pfb>
-Output written on FYS4150-Report-Project1.pdf (4 pages, 234770 bytes).
+ 42i,11n,40p,602b,511s stack positions out of 5000i,500n,10000p,200000b,80000s
+{/usr/local/texlive/2014/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/local/t
+exlive/2014/texmf-dist/fonts/type1/public/txfonts/rtxmi.pfb></usr/local/texlive
+/2014/texmf-dist/fonts/type1/public/txfonts/rtxr.pfb></usr/local/texlive/2014/t
+exmf-dist/fonts/type1/public/txfonts/txex.pfb></usr/local/texlive/2014/texmf-di
+st/fonts/type1/public/txfonts/txsy.pfb></usr/local/texlive/2014/texmf-dist/font
+s/type1/public/txfonts/txtt.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1
+/urw/helvetic/uhvb8a.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/urw/he
+lvetic/uhvro8a.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/urw/times/ut
+mb8a.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/urw/times/utmbi8a.pfb>
+</usr/local/texlive/2014/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/loca
+l/texlive/2014/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
+Output written on FYS4150-Report-Project1.pdf (4 pages, 235996 bytes).
 PDF statistics:
  65 PDF objects out of 1000 (max. 8388607)
  44 compressed objects within 1 object stream
