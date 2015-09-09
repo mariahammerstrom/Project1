@@ -47,7 +47,7 @@ In this project we will solve the one-dimensional Poissson equation with Dirichl
    -\frac{v_{i+1}+v_{i-1}-2v_i}{h^2} = f_i  \hspace{0.5cm} \mathrm{for} \hspace{0.1cm} i=1,\dots, n,
 \end{equation}
 
-\noindent where $f_i=f(x_i)$.\\
+\noindent where $f_i=f(x_i)$. \\
 
 \noindent Eq. (\ref{eq:second_derivative}) can be written as a linear set of equations of the form: 
 
@@ -78,7 +78,6 @@ In this project we will solve the one-dimensional Poissson equation with Dirichl
 \end{align}
 which is the same as equations (\ref{eq:second_derivative}).
 
-\\
 \noindent We will assume that the source term is $f(x) = 100e^{-10x}$. Using the interval and boundary conditions as stated above, the above differential equation has a closed-form  solution given by $u(x) = 1-(1-e^{-10})x-e^{-10x}$. We will compare our numerical solution with this result. 
 
 
@@ -192,13 +191,12 @@ The relative error in the data set is computed by calculating:
 
 \begin{center}
 \begin{tabular}{ l l }\hline
-	$n$ &Maximum error \\
-	\hline
-	10 &XX \\
-	100 &XX \\
-	10^3 &XX \\
-	10^4 &XX \\
-	10^5 &XX\\
+	$n$ 		&Maximum error \\ \hline
+	10 		& 1.18895 \\
+	100 		& 1.03632 \\
+	$10^3$ 	& 1.00786 \\
+	$10^4$ 	& 1.00076 \\
+	$10^5$ 	&XX\\
 	\hline
 \end{tabular}
 \end{center}
@@ -213,21 +211,24 @@ The number of floating point operations and time usage in the different cases, a
 
 \begin{center}
     \begin{tabular}{ l  l  l  l } \hline
-    \textbf{Method} 	&\textbf{\textit{n}} 	&\textbf{FLOPS} 	&\textbf{Time \textit{(s)}} \\ \hline
-    \multirow{4}{*}{Simple algortihm} 	& 10 	& XX	& XX \\ 
-    					& 100 	& XX 	& XX \\
-    					& 1000	& XX 	& XX \\ 
-					& XX	& XX 	& XX \\
+    \textbf{Method} 					&\textbf{\textit{n}} 	&\textbf{FLOPS} 	&\textbf{Time \textit{(s)}} \\ \hline
+    \multirow{5}{*}{Simple algortihm} 		& 10 				& XX				& 0 \\ 
+    								& 100 			& XX 			& 0 \\
+    								& 1 000			& XX 			& 0 \\ 
+								& 10 000			& XX 			& 0 \\
+								& 100 000			& XX 			& XX \\
     \hline
-    \multirow{4}{*}{Gaussian elimination} 	& 10	& XX	& XX \\ 
-    						& 100 	& XX	& XX \\
-    						& 1000	& XX 	& XX \\ 
-						& XX	& XX 	& XX \\ 
+    \multirow{5}{*}{Gaussian elimination} 	& 10				& XX				& - \\ 
+    								& 100 			& XX				& - \\
+    								& 1 000			& XX 			& - \\ 
+								& 10 000			& XX 			& - \\ 
+								& 100 000			& XX 			& - \\
     \hline
-    \multirow{4}{*}{LU decomposition} 	& 10	& XX	& XX \\ 
-    					& 100	& XX	& XX \\
-    					& 1000	& XX	& XX \\ 
-					& XX	& XX	& XX \\ 
+    \multirow{5}{*}{LU decomposition} 		& 10				& XX				& 0 \\ 
+    								& 100			& XX				& 0 \\
+    								& 1 000			& XX				& 3 \\ 
+								& 10 000			& XX				& XX \\ 
+								& 100 000			& XX 			& XX \\
     \hline
     \end{tabular}
 \end{center}
