@@ -68,8 +68,17 @@ In this project we will solve the one-dimensional Poissson equation with Dirichl
                       \end{array} \right)
 \end{equation}
 
-\noindent (Show this!!) \\
+\noindent Written out, we then get
+\begin{align}
+	2v_1 - v_2 &= \tilde{b}_1 \\
+	-v_1 + 2v_2 - v_3 &= \tilde{b}_2 \\
+	-v_2 + 2v_3 - v_4 &= \tilde{b}_3 \\
+	... \\
+	-v_{i-1} + 2v_n - v_{i+1} &= \tilde{b}_i,
+\end{align}
+which is the same as equations (\ref{eq:second_derivative}).
 
+\\
 \noindent We will assume that the source term is $f(x) = 100e^{-10x}$. Using the interval and boundary conditions as stated above, the above differential equation has a closed-form  solution given by $u(x) = 1-(1-e^{-10})x-e^{-10x}$. We will compare our numerical solution with this result. 
 
 
