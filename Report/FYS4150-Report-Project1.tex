@@ -166,11 +166,11 @@ We can run our code for different values of $n$ and plot the analytical and nume
   	\includegraphics[width=90mm]{../build-Project1-Desktop_Qt_5_5_0_clang_64bit-Debug/Plot_n10.png} 	
 	& \includegraphics[width=90mm]{../build-Project1-Desktop_Qt_5_5_0_clang_64bit-Debug/Plot_n100.png} \\
 	
-	(a) $n$ = 10 								& (b) $n$ = 100 \\[6pt]
+	(a) $n$ = 10 								& (b) $n = 10^2$ \\[6pt]
 	
  	\includegraphics[width=90mm]{../build-Project1-Desktop_Qt_5_5_0_clang_64bit-Debug/Plot_n1000.png} 	
 	& \includegraphics[width=90mm]{../build-Project1-Desktop_Qt_5_5_0_clang_64bit-Debug/Plot_n1000.png} \\
-	(c) $n$ = 1 000 								& (d) $n$ = 10 000 (still waiting on program) \\[6pt]
+	(c) $n = 10^3$ 								& (d) $n = 10^4$ (still waiting on program) \\[6pt]
 	
 \end{tabular}
 \caption{Comparison of the three different solutions for different values of $n$. In the three different cases $y(x) = u(x)$ (analytical solution, blue line), $y(x) = v(x)$ (simple algorithm, red line) and $y(x) = b(x)$ (LU decomposition, yellow line).}\label{fig:n-values}
@@ -215,7 +215,7 @@ The number of floating point operations and time usage in the different cases, a
 \begin{center}
     \begin{tabular}{ l  l  l  l } \hline
     \textbf{Method} 					&\textbf{\textit{n}} 	&\textbf{FLOPS} 	&\textbf{Time \textit{(s)}} \\ \hline
-    \multirow{4}{*}{Simple algortihm} 		& 10 				& XX				& 0 \\ 
+    \multirow{4}{*}{Simple algorithm} 		& 10 				& XX				& 0 \\ 
     								& $10^2$  		& XX 			& 0 \\
     								& $10^3$ 			& XX 			& 0 \\ 
 								& $10^4$ 			& XX 			& 0 \\
@@ -241,7 +241,9 @@ Table 2: The number of floating point operations and time usage by method.
 \section{Conclusions} \label{sec:conclusions}
 We ran our code with $n$ ranging from 10 to $10^4$. Due to the amount of time it took to compute the LU decomposition for $n = 10^4$, see Table 2, calculating $n = 10^5$ was impossible. 
 
-In Fig.~\ref{fig:n-values} the results for the different $n$-values are shown. For $n = 10$ the result is way off for the LU decomposition, while the other two solutions are relatively close to each other. 
+In Fig.~\ref{fig:n-values} the results for the different $n$-values are shown. For $n = 10$ the result is way off for the LU decomposition, while the other two solutions are relatively close to each other. By only increasing $n$ by a factor of 10 the results improve significantly. The analytical solution and the solution of the simple algorithm are close to the same, while the result from the LU decomposition is lagging behind. Finally at $n = 10^3$ does all the three different methods align quite nicely, with the LU decomposition still slightly off. 
+
+If we look at this development with regards to computing time as well, shown in Table 2, we see that the computing time for the simple algorithm for our special case of a tridiagonal matrix, does not care about the increasing value of $n$, while the LU decomposition goes rapidly slower as $n$ is increased. Adding this to the fact that the result from the LU decomposition is not very impressive, the simple algorithm is a highly preferred method to use in this case.
 
 \end{multicols}
 
