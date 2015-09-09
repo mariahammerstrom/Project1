@@ -23,7 +23,7 @@ plot(x,y,fliplr(x2),fliplr(y2),x3,y3);
 xlabel('x');
 ylabel('y(x)');
 title(sprintf('Solution to 1D Poisson equation, n = %d',n));
-legend('Analytic solution','Numerical solution','LU decomposition');
+legend('Analytic solution','Simple algorithm','LU decomposition');
 print(sprintf('Plot_n%d',n),'-dpng');
 
 
