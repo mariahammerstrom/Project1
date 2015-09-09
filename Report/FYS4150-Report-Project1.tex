@@ -133,17 +133,32 @@ The first thing to do is to realize that Eq.~\ref{eq:tridiagonal_system} gives a
 
 \noindent where the boundary conditions have been applied to simplify the equations. The idea now is to subtract one row with a scalar multiple of another to eliminate variables. First we want to eliminate $v_1$:\\
 
-(something)\\
+\begin{equation}
+	v_1 = \tilde{b}_1/b_1 - \frac{c_1}{b_1}v_2
+\end{equation}
+Then we can follow the same approach to eliminate $v_i$ by dividing each equation by $b_i$:\\
+\begin{equation}
+	v_i = \tilde{b}_i/b_i - \frac{a_i}{b_i}v_{i-1} - \frac{c_i}{b_i}v_{i+1},
+\end{equation}
+Trying to insert $v_{i-1}$ can proove to be difficult. After some algebra one finds that 
+\begin{equation}\label{eq:fsi}
+	v_i = \left( \tilde{b}_i - a_iv_{i-1} - c_iv_{i+1} \right)/\left( b_i - \frac{a_ic_{i-1}}{d_{i-1}} \right),
+\end{equation}
+where $d_{i-1} =  b_{i-1} - a_{i-1}c_{i-2}/d_{i-2}$, and $d_{2} = b_2 - a_2c_1/b_1$.
+We then have an equation for each $v_n$, and can start going back. This is 
+done with a backward substitution. As we see from equation (\ref{eq:fsi}), we have to add a term $-c_iv_{i+1}/d_i$.
+A pseudocode for solving this set of equations is given as
+\begin{center} % LaTeX has an algorithm function, but not sure how it works
+v[1] = f[1]/b[1]
+for i from 2 up to n-1
+	do  temp[i] = c[i-1]/b[i-1] 
+		btemp = b[i] - a[i]temp[i]
+		v[i] = (f[i]- v[i-1])/btemp
 
-\noindent Then we can follow the same approach to eliminate $v_2$:\\
-
-(something)\\
-
-\noindent The algorithm for solving this equation can be stated as follows:\\
-
-(algorithm)\\
-
-\noindent The algorithm used in our code is given on p. 186 in the lecture notes.
+for i from n-1 down to 1
+    do  v[i] -= temp[i+1]*v[i+1]
+\end{center}
+%\noindent The algorithm used in our code is given on p. 186 in the lecture notes.
 
 
 
