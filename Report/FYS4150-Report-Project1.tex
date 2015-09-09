@@ -11,6 +11,7 @@
 \usepackage[varg]{txfonts}
 \usepackage{graphicx}
 \usepackage{subcaption}
+\usepackage{multirow}
 
 \usepackage{titlesec}
 \titleformat{\section}{\fontfamily{phv}\fontsize{12}{15}\bfseries}{\thesection}{1em}{}
@@ -75,7 +76,7 @@ In this project we will solve the one-dimensional Poissson equation with Dirichl
 
 
 
-\section{Solving the problem}\label{sec:observations}
+\section{Methods}
 \subsection{Simple algorithm}
 In our case we are dealing with a simple tridiagonal matrix. We can therefore rewrite our matrix \textbf{A} in terms of one-dimensional vectors \textit{a, b, c} of length 1:\textit{n}. The linear equation then reads:
 
@@ -136,27 +137,70 @@ The first thing to do is to realize that Eq.~\ref{eq:tridiagonal_system} gives a
 
 
 
-\subsection{Using a library package}
-In addition to solving the linear second-order differential equation Eq.~\ref{eq:Poisson} using the simple algorithm described above, we want to solve the equation using Gaussian elimination and LU decomposition, then compare the results.
+\subsection{LU decomposition}
+In addition to solving the linear second-order differential equation Eq.~\ref{eq:Poisson} using the simple algorithm described above, we want to solve the equation using LU decomposition, then compare the results. For this we will use the provided \verb@lib.cpp@ library.
 
-More coming here.
-
-
+(More coming here!!)
 
 
-\section{Analysis}    \label{sec:analysis}
-\subsection{\dots}
-\dots
 
-\subsection{Number of floating point operations}
+
+\section{Results}    \label{sec:analysis}
+
+\subsection{Comparing the analytical and numerical solution}
+We can run our code for different values of $n$ and plot the analytical and numerical solution to see how well they correspond. For certain values of $n$ we get these plots:
+
+(Plots!!)
+
+
+\subsection{Relative errors}
+
+The relative error in the data set is computed by calculating:
+
+\begin{equation}
+   \epsilon_i=log_{10}\left(\left|\frac{v_i-u_i}
+                 {u_i}\right|\right),
+\end{equation}
+
+\noindent for $i = 1, \dots, n$ for the function values $u_i$ and $v_i$, where $u_i$ represents the closed-form analytical solution, while $v_i$ is the numerical solution given by the simple algorithm described above. The relative error will be a function of $log_{10}(h)$. For each step length $h$ we want to extract the max value of the relative error. Doing this while increasing $n$ to $n=10000$ and $n=10^5$, gives the following results:
+
+(Table!!)
+
+
+\subsection{Number of floating point operations and time usage}
 Some of the methods described above may be more computationally heavy for a computer to do than others. One way to evaluate this is to calculate the precise number of floating point operations ("FLOPS") needed to solve the equations.
 
-For Eq.~\ref{eq:tridiagonal_system} we have that: FLOPS = $2 n^3$. For Gaussian elimination we have XXX and for LU decomposition XXX. 
+For our tridiagonal system, $a\cdot O(n)$ (find $a$!!) FLOPS are required. Gaussian elimination requires $\frac{2}{3}n^3 + O(n^2)$ FLOPS and LU decomposition requires$O(n^3)$. 
 
+The number of floating point operations and time usage in the different cases, are shown in the table below:
+
+
+\begin{center}
+    \begin{tabular}{| l | l | l | l |} \hline
+    \textbf{Method} 					&\textbf{\textit{n}} 	&\textbf{FLOPS} 	&\textbf{Time \textit{(s)}} \\ \hline
+    \multirow{4}{*}{Simple algortihm} 		& XX 			& XX				& XX \\ 
+    								& XX 			& XX 			& XX \\
+    								& XX				& XX 			& XX \\ 
+								& XX				& XX 			& XX \\ \hline
+								
+    \multirow{4}{*}{Gaussian elimination} 	& XX 			& XX				& XX \\ 
+    								& XX 			& XX 			& XX \\
+    								& XX				& XX 			& XX \\ 
+								& XX				& XX 			& XX \\ \hline
+
+    \multirow{4}{*}{LU decomposition} 		& XX 			& XX				& XX \\ 
+    								& XX 			& XX 			& XX \\
+    								& XX				& XX 			& XX \\ 
+								& XX				& XX 			& XX \\ \hline
+																
+    \end{tabular}
+\end{center}
 
 
 \section{Conclusions} \label{sec:conclusions}
 \dots
+
+(Comment on the results in the previous section!!)
 
 \end{multicols}
 
