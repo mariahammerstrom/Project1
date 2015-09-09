@@ -139,14 +139,18 @@ The first thing to do is to realize that Eq.~\ref{eq:tridiagonal_system} gives a
 
 \noindent The algorithm for solving this equation can be stated as follows:\\
 
-(algorithm)
+(algorithm)\\
 
-
+\noindent The algorithm used in our code is given on p. 186 in the lecture notes.
 
 \subsection{LU decomposition}
-In addition to solving the linear second-order differential equation Eq.~\ref{eq:Poisson} using the simple algorithm described above, we want to solve the equation using LU decomposition, then compare the results. For this we will use the provided \verb@lib.cpp@ library.
+In addition to solving the linear second-order differential equation Eq.~\ref{eq:Poisson} using the simple algorithm described above, we want to solve the equation using LU decomposition, then compare the results. Doing an LU decomposition, means rewriting matrix {\bf A} as a product of a lower triangular matrix {\bf L} and an upper triangular matrix {\bf U}, so that:
 
-(More coming here about what LU decomposition is!!)
+\begin{equation*}
+	{\bf A} = {\bf L}{\bf U}
+\end{equation*}
+
+\noindent For the LU decomposition we will use the provided \verb@lib.cpp@ library.
 
 
 
@@ -169,7 +173,7 @@ We can run our code for different values of $n$ and plot the analytical and nume
 	(c) $n$ = 1 000 								& (d) $n$ = 10 000 (still waiting on program) \\[6pt]
 	
 \end{tabular}
-\caption{Comparison of the three different solutions for different values of $n$.}\label{fig:n-values}
+\caption{Comparison of the three different solutions for different values of $n$. In the three different cases $y(x) = u(x)$ (analytical solution, blue line), $y(x) = v(x)$ (simple algorithm, red line) and $y(x) = b(x)$ (LU decomposition, yellow line).}\label{fig:n-values}
 \end{center}
 \end{figure*}
 
@@ -189,10 +193,9 @@ The relative error in the data set is computed by calculating:
 \begin{tabular}{ l l }\hline
 	$n$ 		&Maximum error \\ \hline
 	10 		& 1.18895 \\
-	100 		& 1.03632 \\
+	$10^2$  	& 1.03632 \\
 	$10^3$ 	& 1.00786 \\
 	$10^4$ 	& 1.00076 \\
-	$10^5$ 	&XX\\
 	\hline
 \end{tabular}
 \end{center}
@@ -212,23 +215,20 @@ The number of floating point operations and time usage in the different cases, a
 \begin{center}
     \begin{tabular}{ l  l  l  l } \hline
     \textbf{Method} 					&\textbf{\textit{n}} 	&\textbf{FLOPS} 	&\textbf{Time \textit{(s)}} \\ \hline
-    \multirow{5}{*}{Simple algortihm} 		& 10 				& XX				& 0 \\ 
-    								& 100 			& XX 			& 0 \\
-    								& 1 000			& XX 			& 0 \\ 
-								& 10 000			& XX 			& 0 \\
-								& 100 000			& XX 			& XX \\
+    \multirow{4}{*}{Simple algortihm} 		& 10 				& XX				& 0 \\ 
+    								& $10^2$  		& XX 			& 0 \\
+    								& $10^3$ 			& XX 			& 0 \\ 
+								& $10^4$ 			& XX 			& 0 \\
     \hline
-    \multirow{5}{*}{Gaussian elimination} 	& 10				& XX				& - \\ 
-    								& 100 			& XX				& - \\
-    								& 1 000			& XX 			& - \\ 
-								& 10 000			& XX 			& - \\ 
-								& 100 000			& XX 			& - \\
+    \multirow{4}{*}{Gaussian elimination} 	& 10				& XX				& - \\ 
+    								& $10^2$  		& XX				& - \\
+    								& $10^3$ 			& XX 			& - \\ 
+								& $10^4$ 			& XX 			& - \\ 
     \hline
-    \multirow{5}{*}{LU decomposition} 		& 10				& XX				& 0 \\ 
-    								& 100			& XX				& 0 \\
-    								& 1 000			& XX				& 3 \\ 
-								& 10 000			& XX				& XX \\ 
-								& 100 000			& XX 			& XX \\
+    \multirow{4}{*}{LU decomposition} 		& 10				& XX				& 0 \\ 
+    								& $10^2$ 			& XX				& 0 \\
+    								& $10^3$ 			& XX				& 3 \\ 
+								& $10^4$ 			& XX				& XX \\ 
     \hline
     \end{tabular}
 \end{center}
@@ -239,9 +239,9 @@ Table 2: The number of floating point operations and time usage by method.
 
 
 \section{Conclusions} \label{sec:conclusions}
-\dots
+We ran our code with $n$ ranging from 10 to $10^4$. Due to the amount of time it took to compute the LU decomposition for $n = 10^4$, see Table 2, calculating $n = 10^5$ was impossible. 
 
-(Comment on the results in the previous section!!)
+In Fig.~\ref{fig:n-values} the results for the different $n$-values are shown. For $n = 10$ the result is way off for the LU decomposition, while the other two solutions are relatively close to each other. 
 
 \end{multicols}
 

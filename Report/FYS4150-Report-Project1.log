@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2014.7.15)  9 SEP 2015 14:34
+This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2014.7.15)  9 SEP 2015 15:03
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -499,7 +499,12 @@ Underfull \hbox (badness 10000) in paragraph at lines 140--141
 
  []
 
-LaTeX Font Info:    Try loading font information for OT1+txtt on input line 147
+
+Underfull \hbox (badness 10000) in paragraph at lines 142--143
+
+ []
+
+LaTeX Font Info:    Try loading font information for OT1+txtt on input line 153
 .
 (/usr/local/texlive/2014/texmf-dist/tex/latex/txfonts/ot1txtt.fd
 File: ot1txtt.fd 2000/12/15 v3.1
@@ -511,7 +516,7 @@ File: ../build-Project1-Desktop_Qt_5_5_0_clang_64bit-Debug/Plot_n10.png Graphic
 
 <use ../build-Project1-Desktop_Qt_5_5_0_clang_64bit-Debug/Plot_n10.png>
 Package pdftex.def Info: ../build-Project1-Desktop_Qt_5_5_0_clang_64bit-Debug/P
-lot_n10.png used on input line 162.
+lot_n10.png used on input line 166.
 (pdftex.def)             Requested size: 256.0748pt x 192.05052pt.
 
 <../build-Project1-Desktop_Qt_5_5_0_clang_64bit-Debug/Plot_n100.png, id=16, 578
@@ -521,7 +526,7 @@ c file (type png)
 
 <use ../build-Project1-Desktop_Qt_5_5_0_clang_64bit-Debug/Plot_n100.png>
 Package pdftex.def Info: ../build-Project1-Desktop_Qt_5_5_0_clang_64bit-Debug/P
-lot_n100.png used on input line 163.
+lot_n100.png used on input line 167.
 (pdftex.def)             Requested size: 256.0748pt x 192.05052pt.
 
 <../build-Project1-Desktop_Qt_5_5_0_clang_64bit-Debug/Plot_n1000.png, id=17, 57
@@ -531,14 +536,14 @@ ic file (type png)
 
 <use ../build-Project1-Desktop_Qt_5_5_0_clang_64bit-Debug/Plot_n1000.png>
 Package pdftex.def Info: ../build-Project1-Desktop_Qt_5_5_0_clang_64bit-Debug/P
-lot_n1000.png used on input line 167.
+lot_n1000.png used on input line 171.
 (pdftex.def)             Requested size: 256.0748pt x 192.05052pt.
 File: ../build-Project1-Desktop_Qt_5_5_0_clang_64bit-Debug/Plot_n1000.png Graph
 ic file (type png)
 
 <use ../build-Project1-Desktop_Qt_5_5_0_clang_64bit-Debug/Plot_n1000.png>
 Package pdftex.def Info: ../build-Project1-Desktop_Qt_5_5_0_clang_64bit-Debug/P
-lot_n1000.png used on input line 168.
+lot_n1000.png used on input line 172.
 (pdftex.def)             Requested size: 256.0748pt x 192.05052pt.
 
 [2] [3 <../build-Project1-Desktop_Qt_5_5_0_clang_64bit-Debug/Plot_n10.png (PNG 
@@ -546,10 +551,10 @@ copy)> <../build-Project1-Desktop_Qt_5_5_0_clang_64bit-Debug/Plot_n100.png (PNG
  copy)> <../build-Project1-Desktop_Qt_5_5_0_clang_64bit-Debug/Plot_n1000.png (P
 NG copy)>] (./FYS4150-Report-Project1.aux) ) 
 Here is how much of TeX's memory you used:
- 5098 strings out of 493117
- 73920 string characters out of 6135433
- 250928 words of memory out of 5000000
- 8451 multiletter control sequences out of 15000+600000
+ 5097 strings out of 493117
+ 73904 string characters out of 6135433
+ 257928 words of memory out of 5000000
+ 8450 multiletter control sequences out of 15000+600000
  45655 words of font info for 108 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  42i,11n,40p,472b,506s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -565,7 +570,7 @@ e/2014/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/local/texlive/2014/tex
 mf-dist/fonts/type1/urw/times/utmbi8a.pfb></usr/local/texlive/2014/texmf-dist/f
 onts/type1/urw/times/utmr8a.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1
 /urw/times/utmri8a.pfb>
-Output written on FYS4150-Report-Project1.pdf (3 pages, 231485 bytes).
+Output written on FYS4150-Report-Project1.pdf (3 pages, 233376 bytes).
 PDF statistics:
  62 PDF objects out of 1000 (max. 8388607)
  42 compressed objects within 1 object stream
