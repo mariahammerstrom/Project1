@@ -173,7 +173,7 @@ We can run our code for different values of $n$ and plot the analytical and nume
 	(a) $n$ = 10 								& (b) $n = 10^2$ \\[6pt]
 	
  	\includegraphics[width=90mm]{../build-Project1-Desktop_Qt_5_5_0_clang_64bit-Debug/Plot_n1000.png} 	
-	& \includegraphics[width=90mm]{../build-Project1-Desktop_Qt_5_5_0_clang_64bit-Debug/Plot_n1000.png} \\
+	& \includegraphics[width=90mm]{../build-Project1-Desktop_Qt_5_5_0_clang_64bit-Debug/Plot_n10000.png} \\
 	(c) $n = 10^3$ 								& (d) $n = 10^4$ (still waiting on program) \\[6pt]
 	
 \end{tabular}
@@ -211,7 +211,7 @@ Table 1: Maximum error as a function of step length.
 \subsection{Number of floating point operations and time usage}
 Some of the methods described above may be more computationally heavy for a computer to do than others. One way to evaluate this is to calculate the precise number of floating point operations ("FLOPS") needed to solve the equations.
 
-Gaussian elimination requires $\frac{2}{3}n^3 + O(n^2)$ FLOPS and LU decomposition requires $O(n^3)$. By counting the floating point operations in our code, we find that for our tridiagonal system, $8n + 1$ FLOPS are required. 
+Gaussian elimination requires $\frac{2}{3}n^3 + O(n^2)$ FLOPS and LU decomposition requires $O(n^3)$. By counting the floating point operations in our code, we find that for our tridiagonal system, $8n + 3$ FLOPS are required, where the number 3 represents the floating point operations outside of the \verb@for@-loops. 
 
 The number of floating point operations and time usage in the different cases, are shown in the table below. A brute force Gaussian elimination is not used in the code in this project, and therefore has no values for time usage.
 
@@ -219,20 +219,20 @@ The number of floating point operations and time usage in the different cases, a
 \begin{center}
     \begin{tabular}{ l  l  l  l } \hline
     \textbf{Method} 					&\textbf{\textit{n}} 	&\textbf{FLOPS} 	&\textbf{Time \textit{(s)}} \\ \hline
-    \multirow{4}{*}{Simple algorithm} 		& 10 				& XX				& 0 \\ 
-    								& $10^2$  		& XX 			& 0 \\
-    								& $10^3$ 			& XX 			& 0 \\ 
-								& $10^4$ 			& XX 			& 0 \\
+    \multirow{4}{*}{Simple algorithm} 		& 10 				& 8e+1			& 0 \\ 
+    								& $10^2$  		& 8e+2 			& 0 \\
+    								& $10^3$ 			& 8e+3 			& 0 \\ 
+								& $10^4$ 			& 8e+4 			& 0 \\
     \hline
-    \multirow{4}{*}{Gaussian elimination} 	& 10				& XX				& - \\ 
-    								& $10^2$  		& XX				& - \\
-    								& $10^3$ 			& XX 			& - \\ 
-								& $10^4$ 			& XX 			& - \\ 
+    \multirow{4}{*}{Gaussian elimination} 	& 10				& 1.6e+3			& - \\ 
+    								& $10^2$  		& 1.51e+06		& - \\
+    								& $10^3$ 			& 1.501e+09 		& - \\ 
+								& $10^4$ 			& 1.5001e+12 		& - \\ 
     \hline
-    \multirow{4}{*}{LU decomposition} 		& 10				& XX				& 0 \\ 
-    								& $10^2$ 			& XX				& 0 \\
-    								& $10^3$ 			& XX				& 3 \\ 
-								& $10^4$ 			& XX				& 6726 \\ 
+    \multirow{4}{*}{LU decomposition} 		& 10				& 1e+3			& 0 \\ 
+    								& $10^2$ 			& 1e+06			& 0 \\
+    								& $10^3$ 			& 1e+09			& 3 \\ 
+								& $10^4$ 			& -7.2738e+08		& 6726 \\ 
     \hline
     \end{tabular}
 \end{center}
@@ -245,14 +245,22 @@ Table 2: The number of floating point operations and time usage by method.
 \section{Conclusions} \label{sec:conclusions}
 We ran our code with $n$ ranging from 10 to $10^4$. Due to the amount of time it took to compute the LU decomposition for $n = 10^4$, see Table 2, calculating $n = 10^5$ was impossible. 
 
-In Fig.~\ref{fig:n-values} the results for the different $n$-values are shown. For $n = 10$ the result is way off for the LU decomposition, while the other two solutions are relatively close to each other. By only increasing $n$ by a factor of 10 the results improve significantly. The analytical solution and the solution of the simple algorithm are close to the same, while the result from the LU decomposition is lagging behind. Finally at $n = 10^3$ does all the three different methods align quite nicely, with the LU decomposition still slightly off. 
+In Fig.~\ref{fig:n-values} the results for the different $n$-values are shown. For $n = 10$ the result is way off for the LU decomposition, while the other two solutions are relatively close to each other. By only increasing $n$ by a factor of 10 the results improve significantly. The analytical solution and the solution of the simple algorithm are close to the same, while the result from the LU decomposition is lagging behind. Finally at $n = 10^3$ does all the three different methods align quite nicely, with the LU decomposition still slightly off, while at $n = 10^4$ does the results from all method coincide. 
 
 If we look at this development with regards to computing time as well, shown in Table 2, we see that the computing time for the simple algorithm for our special case of a tridiagonal matrix, does not care about the increasing value of $n$, while the LU decomposition goes rapidly slower as $n$ is increased. Adding this to the fact that the result from the LU decomposition is not very impressive, the simple algorithm is a highly preferred method to use in this case.
 
 If we review the results of the error analysis shown in Table 1, we see that the result is as expected: The error decreases as $n$ increases. For the largest value of $n$, the error is about zero (non-log scale).
 
-(Comment on FLOPS!!)
+From the calculations of the number of floating point operations in Table 2, we see that the simple algorithm continues to have a rather small number of FLOPS as $n$ increases, while Gaussian elimination and LU decomposition has quickly increasing number of FLOPS, which is the reason for the long time usage of the LU decomposition method. Something strange happens for the final FLOPS value for LU decomposition ...
 
+
+\section{List of codes}
+
+The codes developed for this project are:\\
+
+\noindent \verb@main.cpp@ -- main program, C++
+
+\noindent \verb@plotting.m@ -- plotting program, MATLAB
 \end{multicols}
 
 \end{document}
