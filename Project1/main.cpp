@@ -30,7 +30,7 @@ int main()
 
     // START CODE
     int n,i,j;
-    n = 10000;
+    n = 10;
     double h = 1./(n+1);
     cout << "n = " << n << endl;
 
