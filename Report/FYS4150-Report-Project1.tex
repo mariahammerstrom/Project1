@@ -46,7 +46,7 @@ with $x\in(0,1)$ and $u(0) = u(1) = 0$.
 
 We define the discretized approximation to $u$ as $v_i$  with grid points $x_i=ih$, $i=0,1,\dots ,n+1$. The step length, or spacing, is defined as $h=1/(n+1)$, and the boundary conditions are $v_0 = v_{n+1} = 0$. The second derivative of $u$ can be approximated to be
 \begin{equation}\label{eq:second_derivative}
-   -\frac{v_{i+1}+v_{i-1}-2v_i}{h^2} = f_i,  \hspace{0.5cm} \mathrm{for} \hspace{0.1cm} i=1,\dots, n,
+   -\frac{v_{i+1}+v_{i-1}-2v_i}{h^2} = f_i,  \hspace{0.5cm} i=1,\dots, n,
 \end{equation}
 where $f_i=f(x_i)$. This set of equations can then be written as 
 \begin{equation}
