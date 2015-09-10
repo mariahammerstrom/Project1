@@ -124,12 +124,12 @@ The first thing to do is to realize that eq. (\ref{eq:tridiagonal_system}) gives
 	a_i v_{i-1} + b_i v_i + c_i v_{i+1} &= \tilde{b}_i, \hspace{0.5cm} i = 2, \dots, n - 1 \\
 	a_n v_{n-1} + b_n v_n &= \tilde{b}_n, \hspace{0.5cm} i = n  ,
 \end{align}
-where the boundary conditions have been applied to simplify the equations. The idea now is to subtract one row with a scalar multiple of another to eliminate variables. First we want to eliminate $v_1$, this can be done by dividing the first equation by $b_i$, which gives
+where the boundary conditions have been applied to simplify the equations. The idea now is to subtract one row with a scalar multiple of another to eliminate variables. First we eliminate $v_1$, by dividing the first equation by $b_i$, which gives
 
 \begin{equation}
 	v_1 = \frac{1}{b_1}\tilde{b}_1 - \frac{c_1}{b_1}v_2.
 \end{equation}
-Then we can follow the same approach to eliminate $v_i$ by dividing each equation by $b_i$,\\
+Then we follow the same approach to eliminate $v_i$ by dividing each equation by $b_i$,\\
 
 \begin{equation}
 	v_i = \tilde{b}_i/b_i - \frac{a_i}{b_i}v_{i-1} - \frac{c_i}{b_i}v_{i+1}
