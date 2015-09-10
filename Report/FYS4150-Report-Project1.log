@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2014.7.15)  10 SEP 2015 15:18
+This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2014.7.15)  10 SEP 2015 16:15
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -524,27 +524,19 @@ File: ot1phv.fd 2001/06/04 scalable font definitions for OT1/phv.
 LaTeX Font Info:    Font shape `OT1/phv/bx/n' in size <12> not available
 (Font)              Font shape `OT1/phv/b/n' tried instead on input line 38.
 LaTeX Font Info:    Font shape `OT1/phv/m/it' in size <10> not available
-(Font)              Font shape `OT1/phv/m/sl' tried instead on input line 83.
+(Font)              Font shape `OT1/phv/m/sl' tried instead on input line 87.
 
 
 Package multicol Warning: I moved some lines to the next page.
-(multicol)                Footnotes on page 1 might be wrong on input line 122.
+(multicol)                Footnotes on page 1 might be wrong on input line 126.
 
 
 [1
 
 {/usr/local/texlive/2014/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
-Underfull \hbox (badness 10000) in paragraph at lines 127--129
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 140--141
-
- []
-
-LaTeX Font Info:    Try loading font information for OT1+txtt on input line 150
+LaTeX Font Info:    Try loading font information for OT1+txtt on input line 154
 .
+
 (/usr/local/texlive/2014/texmf-dist/tex/latex/txfonts/ot1txtt.fd
 File: ot1txtt.fd 2000/12/15 v3.1
 )
@@ -555,7 +547,7 @@ File: ../build-Project1-Desktop_Qt_5_5_0_clang_64bit-Debug/Plot_n10.png Graphic
 
 <use ../build-Project1-Desktop_Qt_5_5_0_clang_64bit-Debug/Plot_n10.png>
 Package pdftex.def Info: ../build-Project1-Desktop_Qt_5_5_0_clang_64bit-Debug/P
-lot_n10.png used on input line 163.
+lot_n10.png used on input line 167.
 (pdftex.def)             Requested size: 256.0748pt x 192.05052pt.
 
 <../build-Project1-Desktop_Qt_5_5_0_clang_64bit-Debug/Plot_n100.png, id=16, 578
@@ -565,7 +557,7 @@ c file (type png)
 
 <use ../build-Project1-Desktop_Qt_5_5_0_clang_64bit-Debug/Plot_n100.png>
 Package pdftex.def Info: ../build-Project1-Desktop_Qt_5_5_0_clang_64bit-Debug/P
-lot_n100.png used on input line 164.
+lot_n100.png used on input line 168.
 (pdftex.def)             Requested size: 256.0748pt x 192.05052pt.
 
 <../build-Project1-Desktop_Qt_5_5_0_clang_64bit-Debug/Plot_n1000.png, id=17, 57
@@ -575,7 +567,7 @@ ic file (type png)
 
 <use ../build-Project1-Desktop_Qt_5_5_0_clang_64bit-Debug/Plot_n1000.png>
 Package pdftex.def Info: ../build-Project1-Desktop_Qt_5_5_0_clang_64bit-Debug/P
-lot_n1000.png used on input line 168.
+lot_n1000.png used on input line 172.
 (pdftex.def)             Requested size: 256.0748pt x 192.05052pt.
 
 <../build-Project1-Desktop_Qt_5_5_0_clang_64bit-Debug/Plot_n10000.png, id=18, 5
@@ -585,7 +577,7 @@ hic file (type png)
 
 <use ../build-Project1-Desktop_Qt_5_5_0_clang_64bit-Debug/Plot_n10000.png>
 Package pdftex.def Info: ../build-Project1-Desktop_Qt_5_5_0_clang_64bit-Debug/P
-lot_n10000.png used on input line 169.
+lot_n10000.png used on input line 173.
 (pdftex.def)             Requested size: 256.0748pt x 192.05052pt.
 
 [2] [3 <../build-Project1-Desktop_Qt_5_5_0_clang_64bit-Debug/Plot_n10.png (PNG 
@@ -593,19 +585,19 @@ copy)> <../build-Project1-Desktop_Qt_5_5_0_clang_64bit-Debug/Plot_n100.png (PNG
  copy)> <../build-Project1-Desktop_Qt_5_5_0_clang_64bit-Debug/Plot_n1000.png (P
 NG copy)> <../build-Project1-Desktop_Qt_5_5_0_clang_64bit-Debug/Plot_n10000.png
  (PNG copy)>]
-Underfull \hbox (badness 10000) in paragraph at lines 250--251
+Underfull \hbox (badness 10000) in paragraph at lines 254--255
 
  []
 
 [4] (./FYS4150-Report-Project1.aux) ) 
 Here is how much of TeX's memory you used:
- 6508 strings out of 493117
- 93973 string characters out of 6135433
- 283471 words of memory out of 5000000
- 9843 multiletter control sequences out of 15000+600000
+ 6509 strings out of 493117
+ 93981 string characters out of 6135433
+ 284481 words of memory out of 5000000
+ 9844 multiletter control sequences out of 15000+600000
  48287 words of font info for 112 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 42i,11n,40p,665b,507s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 42i,11n,40p,660b,505s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2014/texmf-dist/fonts/
 enc/dvips/base/8r.enc}</usr/local/texlive/2014/texmf-dist/fonts/type1/public/tx
 fonts/rtxmi.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/public/txfonts/
@@ -618,7 +610,7 @@ texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/local/texlive/2014/texmf-dist
 /fonts/type1/urw/times/utmbi8a.pfb></usr/local/texlive/2014/texmf-dist/fonts/ty
 pe1/urw/times/utmr8a.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/urw/ti
 mes/utmri8a.pfb>
-Output written on FYS4150-Report-Project1.pdf (4 pages, 289008 bytes).
+Output written on FYS4150-Report-Project1.pdf (4 pages, 288803 bytes).
 PDF statistics:
  66 PDF objects out of 1000 (max. 8388607)
  44 compressed objects within 1 object stream

@@ -129,7 +129,7 @@ where the boundary conditions have been applied to simplify the equations. The i
 \begin{equation}
 	v_1 = \frac{1}{b_1}\tilde{b}_1 - \frac{c_1}{b_1}v_2.
 \end{equation}
-By dividing each equation by $b_i$, we find similar expressings for $v_i$,
+By dividing each equation by $b_i$, we find similar expressions for $v_i$,
 
 \begin{equation}
 	v_i = \tilde{b}_i/b_i - \frac{a_i}{b_i}v_{i-1} - \frac{c_i}{b_i}v_{i+1}.
@@ -141,7 +141,7 @@ Trying to insert $v_{i-1}$ into the equations for $v_i$ can prove to be difficul
 \end{equation}
 where $d_{i-1} =  b_{i-1} - a_{i-1}c_{i-2}/d_{i-2}$, and $d_{2} = b_2 - a_2c_1/b_1$. This process is called forward substitution.
 
-We then have an equation for each $v_n$, and can start going back. This is done with a backward substitution. As we see from Eq. (\ref{eq:fsi}), we have to add a term $-c_iv_{i+1}/d_i$ to each $v_i$. The solution to \textbf{v} is then easily found.
+We then have an equation for each $v_n$, and can start going backwards. This is done with a backward substitution. As we see from eq. (\ref{eq:fsi}), we have to add a term $-c_iv_{i+1}/d_i$ to each $v_i$. The solution to \textbf{v} is then easily found.
 
 
 
@@ -159,7 +159,7 @@ For the LU decomposition we use the provided \verb@lib.cpp@ library.
 \section{Results}    \label{sec:analysis}
 
 \subsection{Comparing the analytical and numerical solution}
-We ran our code for different values of $n$ and plotted the analytical and numerical solution to see how well they correspond. For different values of $n$, see fig.~\ref{fig:n-values}.
+We ran our code for different values of $n$ and plotted the analytical and numerical solution to see how well they correspond. For different values of $n$, see Fig.~\ref{fig:n-values}.
 
 \begin{figure*}
 \begin{center}
@@ -171,10 +171,10 @@ We ran our code for different values of $n$ and plotted the analytical and numer
 	
  	\includegraphics[width=90mm]{../build-Project1-Desktop_Qt_5_5_0_clang_64bit-Debug/Plot_n1000.png} 	
 	& \includegraphics[width=90mm]{../build-Project1-Desktop_Qt_5_5_0_clang_64bit-Debug/Plot_n10000.png} \\
-	(c) $n = 10^3$ 								& (d) $n = 10^4$ (still waiting on program) \\[6pt]
+	(c) $n = 10^3$ 								& (d) $n = 10^4$\\[6pt]
 	
 \end{tabular}
-\caption{Comparison of the three different solutions for different values of $n$. In the three different cases $y(x) = u(x)$ (analytical solution, blue line), $y(x) = v(x)$ (simple algorithm, red line) and $y(x) = b(x)$ (LU decomposition, yellow line).}\label{fig:n-values}
+\caption{Comparison of the three different solutions for different values of $n$. In the three different cases, $y(x) = u(x)$ (analytical solution, blue line), $y(x) = v(x)$ (simple algorithm, red line) and $y(x) = b(x)$ (LU decomposition, yellow line).}\label{fig:n-values}
 \end{center}
 \end{figure*}
 
@@ -186,7 +186,7 @@ The relative error in the data set is computed by calculating
    \epsilon_i=log_{10}\left(\left|\frac{v_i-u_i}
                  {u_i}\right|\right),
 \end{equation}
-$i = 1, \dots, n$, where $u_i$ represents the closed-form analytical solution, whereas $v_i$ is the numerical solution given by our simple algorithm (see section \ref{simpal}). The relative error is a function of $log_{10}(h)$. For each step length $h$ we want to extract the maximum value of the relative error. Doing this while increasing $n$ to $n=10000$ and $n=10^5$, gives the following results:
+$i = 1, \dots, n$, where $u_i$ represents the closed-form analytical solution, whereas $v_i$ is the numerical solution given by our simple algorithm (see section \ref{simpal}). The relative error is a function of $log_{10}(h)$. For each step length $h$ we want to extract the maximum value of the relative error. Doing this while increasing $n$ from $n=10$ to $n=10^5$ gives the following results:
 
 \begin{center}
 \begin{tabular}{ l l }\hline
@@ -206,7 +206,7 @@ Table 1: Maximum error as a function of step length.
 \subsection{Number of floating point operations and time usage}
 Some of the methods described above may be more computationally heavy for a computer to do than others. One way to evaluate this is to calculate the precise number of floating point operations ("FLOPS") needed to solve the equations.
 
-Gaussian elimination requires $\frac{2}{3}n^3 + O(n^2)$ FLOPS and LU decomposition requires $O(n^3)$. By counting the floating point operations in our code, we find that for our tridiagonal system, $8n + 3$ FLOPS are required, where the number 3 represents the floating point operations outside of the \verb@for@-loops. 
+Gaussian elimination requires $\frac{2}{3}n^3 + O(n^2)$ FLOPS and LU decomposition requires $O(n^3)$. By counting the floating point operations in our code, we find that for our tridiagonal system, $8n + 3$ FLOPS are required, where the number 3 represents the floating point operations outside of the \verb@for@-loops, which can be ignored as $8n$ will be much larger. 
 
 The number of floating point operations and time usage in the different cases, are shown in the table below. A brute force Gaussian elimination is not used in the code in this project, and therefore has no values for time usage.
 
