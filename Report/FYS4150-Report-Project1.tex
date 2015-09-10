@@ -223,7 +223,7 @@ The number of floating point operations and time usage in the different cases, a
     \multirow{4}{*}{LU decomposition} 		& 10				& 1e+3			& 0 \\ 
     								& $10^2$ 			& 1e+06			& 0 \\
     								& $10^3$ 			& 1e+09			& 3 \\ 
-								& $10^4$ 			& -7.2738e+08		& 6726 \\ 
+								& $10^4$ 			& 1e+12			& 6726 \\ 
     \hline
     \end{tabular}
 \end{center}
@@ -242,7 +242,7 @@ If we look at this development with regards to computing time as well, shown in 
 
 If we review the results of the error analysis shown in Table 1, we see that the result is as expected: The error decreases as $n$ increases. For the largest value of $n$, the error is about zero (non-log scale).
 
-From the calculations of the number of floating point operations in Table 2, we see that the simple algorithm continues to have a rather small number of FLOPS as $n$ increases, while Gaussian elimination and LU decomposition has quickly increasing number of FLOPS, which is the reason for the long time usage of the LU decomposition method. Something strange happens for the final FLOPS value for LU decomposition ...
+From the calculations of the number of floating point operations in Table 2, we see that the simple algorithm continues to have a rather small number of FLOPS as $n$ increases, while Gaussian elimination and LU decomposition has quickly increasing number of FLOPS, which is the reason for the long time usage of the LU decomposition method. 
 
 
 \section{List of codes}
