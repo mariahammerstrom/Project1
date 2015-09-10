@@ -84,7 +84,7 @@ We will compare our numerical solution with this result.
 
 
 \section{Methods}
-\subsection{Simple algorithm}
+\subsection{Simple algorithm}\label{simpal}
 In our case we are dealing with a simple tridiagonal matrix. We can therefore rewrite our matrix \textbf{A} in terms of one-dimensional vectors \textit{a, b, c} of length 1:\textit{n}. The linear equation then reads
 \begin{equation}
     {\bf A} = \left(\begin{array}{cccccc}
@@ -186,7 +186,7 @@ The relative error in the data set is computed by calculating
    \epsilon_i=log_{10}\left(\left|\frac{v_i-u_i}
                  {u_i}\right|\right),
 \end{equation}
-for $i = 1, \dots, n$ for the function values $u_i$ and $v_i$, where $u_i$ represents the closed-form analytical solution, while $v_i$ is the numerical solution given by the simple algorithm described above. The relative error will be a function of $log_{10}(h)$. For each step length $h$ we want to extract the max value of the relative error. Doing this while increasing $n$ to $n=10000$ and $n=10^5$, gives the following results:
+$i = 1, \dots, n$, where $u_i$ represents the closed-form analytical solution, whereas $v_i$ is the numerical solution given by our simple algorithm (see section \ref{simpal}). The relative error is a function of $log_{10}(h)$. For each step length $h$ we want to extract the maximum value of the relative error. Doing this while increasing $n$ to $n=10000$ and $n=10^5$, gives the following results:
 
 \begin{center}
 \begin{tabular}{ l l }\hline
