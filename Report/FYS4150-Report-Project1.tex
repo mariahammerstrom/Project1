@@ -134,7 +134,7 @@ By dividing each equation by $b_i$, we find similar expressings for $v_i$,
 \begin{equation}
 	v_i = \tilde{b}_i/b_i - \frac{a_i}{b_i}v_{i-1} - \frac{c_i}{b_i}v_{i+1}.
 \end{equation}
-Trying to insert $v_{i-1}$ into the equations for $v_i$ can prove to be difficult. After some algebra one finds that:
+Trying to insert $v_{i-1}$ into the equations for $v_i$ can prove to be difficult for large $i$. After some algebra one finds that
 
 \begin{equation}\label{eq:fsi}
 	v_i = \left( \tilde{b}_i - a_iv_{i-1} - c_iv_{i+1} \right)/\left( b_i - \frac{a_ic_{i-1}}{d_{i-1}} \right),
