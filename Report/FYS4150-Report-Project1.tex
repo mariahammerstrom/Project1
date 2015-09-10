@@ -73,7 +73,11 @@ This transition can be shown by writing it out. We then get
 \end{align*}
 which is the same as Eq. (\ref{eq:second_derivative}). 
 
-We assume that the source term is $f(x) = 100e^{-10x}$. Using the interval and boundary conditions as stated above, the above differential equation has a closed-form  solution given by $u(x) = 1-(1-e^{-10})x-e^{-10x}$. We will compare our numerical solution with this result. 
+We assume that the source term is $f(x) = 100\exp{-10x}$. Using the interval and boundary conditions stated above, equation (\ref{eq:Poisson}) has a closed-form solution given by
+\begin{equation}
+u(x) = 1-(1-\exp{-10})x-\exp{-10x}.
+\end{equation}
+We will compare our numerical solution with this result. 
 
 
 
