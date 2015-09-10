@@ -37,25 +37,14 @@ int main()
 
     // FLOPS
     double FLOPS_tridiagonal = 8*n;
+
+    double FLOPS_LUdecomp = 1.*n*n*n;
     double FLOPS_Gaussian = (3./2)*n*n*n + n*n;
-    double FLOPS_LUdecomp = n*n*n;
 
     cout << endl << "FLOPS" << endl;
     cout << "Tridiagonal: " << "\t" << FLOPS_tridiagonal << endl;
     cout << "Gaussian: " << "\t" << FLOPS_Gaussian << endl;
     cout << "LU decomp: " << "\t" << FLOPS_LUdecomp << endl;
-
-
-    // Define vectors a, b, c
-    double a[n],b[n],c[n];
-    a[0] = 0;
-    b[0] = 2;
-    for(i=1; i<n; i++){
-        a[i] = -1;
-        b[i] = 2;
-        c[i-1] = -1;
-    }
-    c[n] = 0;
 
 
     // ANALYTICAL SOLUTION
@@ -74,6 +63,17 @@ int main()
 
     // SIMPLE ALGORITHM
     ofstream file_simple("Project1_simple_algorithm_n" + to_string(n) + ".txt");
+
+    // Define vectors a, b, c
+    double a[n],b[n],c[n];
+    a[0] = 0;
+    b[0] = 2;
+    for(i=1; i<n; i++){
+        a[i] = -1;
+        b[i] = 2;
+        c[i-1] = -1;
+    }
+    c[n] = 0;
 
     // Forward substitution:
     double v[n],temp[n];
