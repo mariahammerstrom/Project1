@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2014.7.15)  10 SEP 2015 14:18
+This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2014.7.15)  10 SEP 2015 14:49
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -524,26 +524,26 @@ File: ot1phv.fd 2001/06/04 scalable font definitions for OT1/phv.
 LaTeX Font Info:    Font shape `OT1/phv/bx/n' in size <12> not available
 (Font)              Font shape `OT1/phv/b/n' tried instead on input line 38.
 LaTeX Font Info:    Font shape `OT1/phv/m/it' in size <10> not available
-(Font)              Font shape `OT1/phv/m/sl' tried instead on input line 81.
+(Font)              Font shape `OT1/phv/m/sl' tried instead on input line 83.
 
 
 Package multicol Warning: I moved some lines to the next page.
-(multicol)                Footnotes on page 1 might be wrong on input line 120.
+(multicol)                Footnotes on page 1 might be wrong on input line 122.
 
 
 [1
 
 {/usr/local/texlive/2014/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
-Underfull \hbox (badness 10000) in paragraph at lines 125--127
+Underfull \hbox (badness 10000) in paragraph at lines 127--129
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 138--139
+Underfull \hbox (badness 10000) in paragraph at lines 140--141
 
  []
 
-LaTeX Font Info:    Try loading font information for OT1+txtt on input line 149
+LaTeX Font Info:    Try loading font information for OT1+txtt on input line 150
 .
 (/usr/local/texlive/2014/texmf-dist/tex/latex/txfonts/ot1txtt.fd
 File: ot1txtt.fd 2000/12/15 v3.1
@@ -555,7 +555,7 @@ File: ../build-Project1-Desktop_Qt_5_5_0_clang_64bit-Debug/Plot_n10.png Graphic
 
 <use ../build-Project1-Desktop_Qt_5_5_0_clang_64bit-Debug/Plot_n10.png>
 Package pdftex.def Info: ../build-Project1-Desktop_Qt_5_5_0_clang_64bit-Debug/P
-lot_n10.png used on input line 162.
+lot_n10.png used on input line 163.
 (pdftex.def)             Requested size: 256.0748pt x 192.05052pt.
 
 <../build-Project1-Desktop_Qt_5_5_0_clang_64bit-Debug/Plot_n100.png, id=16, 578
@@ -565,7 +565,7 @@ c file (type png)
 
 <use ../build-Project1-Desktop_Qt_5_5_0_clang_64bit-Debug/Plot_n100.png>
 Package pdftex.def Info: ../build-Project1-Desktop_Qt_5_5_0_clang_64bit-Debug/P
-lot_n100.png used on input line 163.
+lot_n100.png used on input line 164.
 (pdftex.def)             Requested size: 256.0748pt x 192.05052pt.
 
 <../build-Project1-Desktop_Qt_5_5_0_clang_64bit-Debug/Plot_n1000.png, id=17, 57
@@ -575,7 +575,7 @@ ic file (type png)
 
 <use ../build-Project1-Desktop_Qt_5_5_0_clang_64bit-Debug/Plot_n1000.png>
 Package pdftex.def Info: ../build-Project1-Desktop_Qt_5_5_0_clang_64bit-Debug/P
-lot_n1000.png used on input line 167.
+lot_n1000.png used on input line 168.
 (pdftex.def)             Requested size: 256.0748pt x 192.05052pt.
 
 <../build-Project1-Desktop_Qt_5_5_0_clang_64bit-Debug/Plot_n10000.png, id=18, 5
@@ -585,7 +585,7 @@ hic file (type png)
 
 <use ../build-Project1-Desktop_Qt_5_5_0_clang_64bit-Debug/Plot_n10000.png>
 Package pdftex.def Info: ../build-Project1-Desktop_Qt_5_5_0_clang_64bit-Debug/P
-lot_n10000.png used on input line 168.
+lot_n10000.png used on input line 169.
 (pdftex.def)             Requested size: 256.0748pt x 192.05052pt.
 
 [2] [3 <../build-Project1-Desktop_Qt_5_5_0_clang_64bit-Debug/Plot_n10.png (PNG 
@@ -593,7 +593,7 @@ copy)> <../build-Project1-Desktop_Qt_5_5_0_clang_64bit-Debug/Plot_n100.png (PNG
  copy)> <../build-Project1-Desktop_Qt_5_5_0_clang_64bit-Debug/Plot_n1000.png (P
 NG copy)> <../build-Project1-Desktop_Qt_5_5_0_clang_64bit-Debug/Plot_n10000.png
  (PNG copy)>]
-Underfull \hbox (badness 10000) in paragraph at lines 249--250
+Underfull \hbox (badness 10000) in paragraph at lines 250--251
 
  []
 
@@ -618,7 +618,7 @@ texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/local/texlive/2014/texmf-dist
 /fonts/type1/urw/times/utmbi8a.pfb></usr/local/texlive/2014/texmf-dist/fonts/ty
 pe1/urw/times/utmr8a.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/urw/ti
 mes/utmri8a.pfb>
-Output written on FYS4150-Report-Project1.pdf (4 pages, 287457 bytes).
+Output written on FYS4150-Report-Project1.pdf (4 pages, 287513 bytes).
 PDF statistics:
  66 PDF objects out of 1000 (max. 8388607)
  44 compressed objects within 1 object stream

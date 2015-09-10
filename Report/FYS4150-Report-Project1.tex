@@ -40,8 +40,10 @@ In this project we will solve the one-dimensional Poisson equation with Dirichle
 
 The equation to be solved is
 \begin{equation}\label{eq:Poisson}
-	-u''(x) = f(x), \hspace{0.5cm} \mathrm{with } x\in(0,1) \mathrm{ and } u(0) = u(1) = 0.
+	-u''(x) = f(x),
 \end{equation}
+with $x\in(0,1)$ and $u(0) = u(1) = 0$.
+
 We define the discretized approximation to $u$ as $v_i$  with grid points $x_i=ih$ in the interval from $x_0=0$ to $x_{n+1}=1$. The step length or spacing is defined as $h=1/(n+1)$, and the boundary conditions are $v_0 = v_{n+1} = 0$. The second derivative of $u$ can be approximated to be
 \begin{equation}\label{eq:second_derivative}
    -\frac{v_{i+1}+v_{i-1}-2v_i}{h^2} = f_i  \hspace{0.5cm} \mathrm{for} \hspace{0.1cm} i=1,\dots, n,
