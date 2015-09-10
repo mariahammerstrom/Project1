@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2014.7.15)  9 SEP 2015 16:36
+This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2014.7.15)  10 SEP 2015 08:06
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -162,9 +162,62 @@ Package: multicol 2014/04/23 v1.8e multicolumn formatting (FMi)
 \colbreak@box=\box53
 \mc@col@check@num=\count110
 )
-(/usr/local/texlive/2014/texmf-dist/tex/latex/lipsum/lipsum.sty
+(/usr/local/texlive/2014/texmf-dist/tex/latex/algorithm2e/algorithm2e.sty
+Package: algorithm2e 2013/01/06 v5.00 algorithms environments
+\c@AlgoLine=\count111
+
+(/usr/local/texlive/2014/texmf-dist/tex/latex/base/ifthen.sty
+Package: ifthen 2001/05/26 v1.1c Standard LaTeX ifthen package (DPC)
+)
+(/usr/local/texlive/2014/texmf-dist/tex/latex/tools/xspace.sty
+Package: xspace 2009/10/20 v1.13 Space after command names (DPC,MH)
+)
+(/usr/local/texlive/2014/texmf-dist/tex/latex/relsize/relsize.sty
+Package: relsize 2013/03/29 ver 4.1
+)
+********************************************************
+Package `algorithm2e' Release 5.0 -- january 06 2013 --
+- algorithm2e-announce@lirmm.fr mailing list for announcement about releases
+- algorithm2e-discussion@lirmm.fr mailing list for discussion about package
+subscribe by emailing sympa@lirmm.fr with 'subscribe <list> <firstname name>'
+- Author: Christophe Fiorio (cfiorio@um2.fr)
+********************************************************
+\skiptotal=\skip48
+\skiplinenumber=\skip49
+\skiprule=\skip50
+\skiphlne=\skip51
+\skiptext=\skip52
+\skiplength=\skip53
+\algomargin=\skip54
+\skipalgocfslide=\skip55
+\algowidth=\dimen129
+\inoutsize=\dimen130
+\inoutindent=\dimen131
+\interspacetitleruled=\dimen132
+\interspacealgoruled=\dimen133
+\interspacetitleboxruled=\dimen134
+\algocf@inoutbox=\box54
+\algocf@inputbox=\box55
+\AlCapSkip=\skip56
+\AlCapHSkip=\skip57
+\algoskipindent=\skip58
+\algocf@nlbox=\box56
+\algocf@hangingbox=\box57
+\algocf@untilbox=\box58
+\algocf@skipuntil=\skip59
+\algocf@capbox=\box59
+\algoheightruledefault=\skip60
+\algoheightrule=\skip61
+\algotitleheightruledefault=\skip62
+\algotitleheightrule=\skip63
+\c@algocfline=\count112
+\c@algocfproc=\count113
+\c@algocf=\count114
+\algocf@algoframe=\box60
+\algocf@algobox=\box61
+) (/usr/local/texlive/2014/texmf-dist/tex/latex/lipsum/lipsum.sty
 Package: lipsum 2011/04/14 v1.2 150 paragraphs of Lorem Ipsum dummy text
-\c@lips@count=\count111
+\c@lips@count=\count115
 )
 (/usr/local/texlive/2014/texmf-dist/tex/latex/txfonts/txfonts.sty
 Package: txfonts 2008/01/22 v3.2.1
@@ -265,10 +318,10 @@ Package: infwarerr 2010/04/08 v1.3 Providing info/warning/error messages (HO)
 (/usr/local/texlive/2014/texmf-dist/tex/generic/oberdiek/ltxcmds.sty
 Package: ltxcmds 2011/11/09 v1.22 LaTeX kernel commands for general use (HO)
 )
-\Gread@gobject=\count112
+\Gread@gobject=\count116
 ))
-\Gin@req@height=\dimen129
-\Gin@req@width=\dimen130
+\Gin@req@height=\dimen135
+\Gin@req@width=\dimen136
 )
 (/usr/local/texlive/2014/texmf-dist/tex/latex/caption/subcaption.sty
 Package: subcaption 2013/02/03 v1.1-62 Sub-captions (AR)
@@ -279,73 +332,73 @@ Package: caption 2013/05/02 v3.3-89 Customizing captions (AR)
 (/usr/local/texlive/2014/texmf-dist/tex/latex/caption/caption3.sty
 Package: caption3 2013/05/02 v1.6-88 caption3 kernel (AR)
 Package caption3 Info: TeX engine: e-TeX on input line 57.
-\captionmargin=\dimen131
-\captionmargin@=\dimen132
-\captionwidth=\dimen133
-\caption@tempdima=\dimen134
-\caption@indent=\dimen135
-\caption@parindent=\dimen136
-\caption@hangindent=\dimen137
+\captionmargin=\dimen137
+\captionmargin@=\dimen138
+\captionwidth=\dimen139
+\caption@tempdima=\dimen140
+\caption@indent=\dimen141
+\caption@parindent=\dimen142
+\caption@hangindent=\dimen143
 )
-\c@ContinuedFloat=\count113
+\c@ContinuedFloat=\count117
 )
-\c@subfigure=\count114
-\c@subtable=\count115
+\c@subfigure=\count118
+\c@subtable=\count119
 )
 (/usr/local/texlive/2014/texmf-dist/tex/latex/multirow/multirow.sty
-\bigstrutjot=\dimen138
+\bigstrutjot=\dimen144
 )
 (/usr/local/texlive/2014/texmf-dist/tex/latex/titlesec/titlesec.sty
 Package: titlesec 2011/12/15 v2.10.0 Sectioning titles
-\ttl@box=\box54
-\beforetitleunit=\skip48
-\aftertitleunit=\skip49
-\ttl@plus=\dimen139
-\ttl@minus=\dimen140
+\ttl@box=\box62
+\beforetitleunit=\skip64
+\aftertitleunit=\skip65
+\ttl@plus=\dimen145
+\ttl@minus=\dimen146
 \ttl@toksa=\toks21
-\titlewidth=\dimen141
-\titlewidthlast=\dimen142
-\titlewidthfirst=\dimen143
+\titlewidth=\dimen147
+\titlewidthlast=\dimen148
+\titlewidthfirst=\dimen149
 )
 (./FYS4150-Report-Project1.aux)
 \openout1 = `FYS4150-Report-Project1.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/txmi/m/it on input line 24.
-LaTeX Font Info:    Try loading font information for OML+txmi on input line 24.
+LaTeX Font Info:    Checking defaults for OML/txmi/m/it on input line 25.
+LaTeX Font Info:    Try loading font information for OML+txmi on input line 25.
 
 
 (/usr/local/texlive/2014/texmf-dist/tex/latex/txfonts/omltxmi.fd
 File: omltxmi.fd 2000/12/15 v3.1
 )
-LaTeX Font Info:    ... okay on input line 24.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 24.
-LaTeX Font Info:    ... okay on input line 24.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 24.
-LaTeX Font Info:    ... okay on input line 24.
-LaTeX Font Info:    Checking defaults for OMS/txsy/m/n on input line 24.
-LaTeX Font Info:    Try loading font information for OMS+txsy on input line 24.
+LaTeX Font Info:    ... okay on input line 25.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 25.
+LaTeX Font Info:    ... okay on input line 25.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 25.
+LaTeX Font Info:    ... okay on input line 25.
+LaTeX Font Info:    Checking defaults for OMS/txsy/m/n on input line 25.
+LaTeX Font Info:    Try loading font information for OMS+txsy on input line 25.
 
 
 (/usr/local/texlive/2014/texmf-dist/tex/latex/txfonts/omstxsy.fd
 File: omstxsy.fd 2000/12/15 v3.1
 )
-LaTeX Font Info:    ... okay on input line 24.
-LaTeX Font Info:    Checking defaults for OMX/txex/m/n on input line 24.
-LaTeX Font Info:    Try loading font information for OMX+txex on input line 24.
+LaTeX Font Info:    ... okay on input line 25.
+LaTeX Font Info:    Checking defaults for OMX/txex/m/n on input line 25.
+LaTeX Font Info:    Try loading font information for OMX+txex on input line 25.
 
 
 (/usr/local/texlive/2014/texmf-dist/tex/latex/txfonts/omxtxex.fd
 File: omxtxex.fd 2000/12/15 v3.1
 )
-LaTeX Font Info:    ... okay on input line 24.
-LaTeX Font Info:    Checking defaults for U/txexa/m/n on input line 24.
-LaTeX Font Info:    Try loading font information for U+txexa on input line 24.
+LaTeX Font Info:    ... okay on input line 25.
+LaTeX Font Info:    Checking defaults for U/txexa/m/n on input line 25.
+LaTeX Font Info:    Try loading font information for U+txexa on input line 25.
 
 (/usr/local/texlive/2014/texmf-dist/tex/latex/txfonts/utxexa.fd
 File: utxexa.fd 2000/12/15 v3.1
 )
-LaTeX Font Info:    ... okay on input line 24.
-LaTeX Font Info:    Try loading font information for OT1+txr on input line 24.
+LaTeX Font Info:    ... okay on input line 25.
+LaTeX Font Info:    Try loading font information for OT1+txr on input line 25.
 
 (/usr/local/texlive/2014/texmf-dist/tex/latex/txfonts/ot1txr.fd
 File: ot1txr.fd 2000/12/15 v3.1
@@ -386,16 +439,16 @@ File: ot1txr.fd 2000/12/15 v3.1
 
 (/usr/local/texlive/2014/texmf-dist/tex/context/base/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count116
-\scratchdimen=\dimen144
-\scratchbox=\box55
-\nofMPsegments=\count117
-\nofMParguments=\count118
+\scratchcounter=\count120
+\scratchdimen=\dimen150
+\scratchbox=\box63
+\nofMPsegments=\count121
+\nofMParguments=\count122
 \everyMPshowfont=\toks22
-\MPscratchCnt=\count119
-\MPscratchDim=\dimen145
-\MPnumerator=\count120
-\makeMPintoPDFobject=\count121
+\MPscratchCnt=\count123
+\MPscratchDim=\dimen151
+\MPnumerator=\count124
+\makeMPintoPDFobject=\count125
 \everyMPtoPDFconversion=\toks23
 ) (/usr/local/texlive/2014/texmf-dist/tex/generic/oberdiek/pdftexcmds.sty
 Package: pdftexcmds 2011/11/29 v0.20 Utility functions of pdfTeX for LuaTeX (HO
@@ -443,74 +496,54 @@ e
 ))
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: End \AtBeginDocument code.
-LaTeX Font Info:    Try loading font information for U+txmia on input line 26.
+LaTeX Font Info:    Try loading font information for U+txmia on input line 27.
 
 (/usr/local/texlive/2014/texmf-dist/tex/latex/txfonts/utxmia.fd
 File: utxmia.fd 2000/12/15 v3.1
 )
-LaTeX Font Info:    Try loading font information for U+txsya on input line 26.
+LaTeX Font Info:    Try loading font information for U+txsya on input line 27.
 
 (/usr/local/texlive/2014/texmf-dist/tex/latex/txfonts/utxsya.fd
 File: utxsya.fd 2000/12/15 v3.1
 )
-LaTeX Font Info:    Try loading font information for U+txsyb on input line 26.
+LaTeX Font Info:    Try loading font information for U+txsyb on input line 27.
 
 (/usr/local/texlive/2014/texmf-dist/tex/latex/txfonts/utxsyb.fd
 File: utxsyb.fd 2000/12/15 v3.1
 )
-LaTeX Font Info:    Try loading font information for U+txsyc on input line 26.
+LaTeX Font Info:    Try loading font information for U+txsyc on input line 27.
 
 (/usr/local/texlive/2014/texmf-dist/tex/latex/txfonts/utxsyc.fd
 File: utxsyc.fd 2000/12/15 v3.1
 )
-LaTeX Font Info:    Try loading font information for OT1+phv on input line 37.
+LaTeX Font Info:    Try loading font information for OT1+phv on input line 38.
 
 (/usr/local/texlive/2014/texmf-dist/tex/latex/psnfss/ot1phv.fd
 File: ot1phv.fd 2001/06/04 scalable font definitions for OT1/phv.
 )
 LaTeX Font Info:    Font shape `OT1/phv/bx/n' in size <12> not available
-(Font)              Font shape `OT1/phv/b/n' tried instead on input line 37.
+(Font)              Font shape `OT1/phv/b/n' tried instead on input line 38.
 LaTeX Font Info:    Font shape `OT1/phv/m/it' in size <10> not available
-(Font)              Font shape `OT1/phv/m/sl' tried instead on input line 88.
+(Font)              Font shape `OT1/phv/m/sl' tried instead on input line 81.
 
 
 Package multicol Warning: I moved some lines to the next page.
-(multicol)                Footnotes on page 1 might be wrong on input line 125.
+(multicol)                Footnotes on page 1 might be wrong on input line 120.
 
 
 [1
 
 {/usr/local/texlive/2014/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
-Underfull \hbox (badness 10000) in paragraph at lines 134--135
+Underfull \hbox (badness 10000) in paragraph at lines 127--128
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 136--137
+Underfull \hbox (badness 10000) in paragraph at lines 141--142
 
  []
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 138--139
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 140--141
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 142--143
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 144--145
-
- []
-
-LaTeX Font Info:    Try loading font information for OT1+txtt on input line 157
+LaTeX Font Info:    Try loading font information for OT1+txtt on input line 170
 .
 (/usr/local/texlive/2014/texmf-dist/tex/latex/txfonts/ot1txtt.fd
 File: ot1txtt.fd 2000/12/15 v3.1
@@ -522,7 +555,7 @@ File: ../build-Project1-Desktop_Qt_5_5_0_clang_64bit-Debug/Plot_n10.png Graphic
 
 <use ../build-Project1-Desktop_Qt_5_5_0_clang_64bit-Debug/Plot_n10.png>
 Package pdftex.def Info: ../build-Project1-Desktop_Qt_5_5_0_clang_64bit-Debug/P
-lot_n10.png used on input line 170.
+lot_n10.png used on input line 183.
 (pdftex.def)             Requested size: 256.0748pt x 192.05052pt.
 
 <../build-Project1-Desktop_Qt_5_5_0_clang_64bit-Debug/Plot_n100.png, id=16, 578
@@ -532,7 +565,7 @@ c file (type png)
 
 <use ../build-Project1-Desktop_Qt_5_5_0_clang_64bit-Debug/Plot_n100.png>
 Package pdftex.def Info: ../build-Project1-Desktop_Qt_5_5_0_clang_64bit-Debug/P
-lot_n100.png used on input line 171.
+lot_n100.png used on input line 184.
 (pdftex.def)             Requested size: 256.0748pt x 192.05052pt.
 
 <../build-Project1-Desktop_Qt_5_5_0_clang_64bit-Debug/Plot_n1000.png, id=17, 57
@@ -542,7 +575,7 @@ ic file (type png)
 
 <use ../build-Project1-Desktop_Qt_5_5_0_clang_64bit-Debug/Plot_n1000.png>
 Package pdftex.def Info: ../build-Project1-Desktop_Qt_5_5_0_clang_64bit-Debug/P
-lot_n1000.png used on input line 175.
+lot_n1000.png used on input line 188.
 (pdftex.def)             Requested size: 256.0748pt x 192.05052pt.
 
 <../build-Project1-Desktop_Qt_5_5_0_clang_64bit-Debug/Plot_n10000.png, id=18, 5
@@ -552,7 +585,7 @@ hic file (type png)
 
 <use ../build-Project1-Desktop_Qt_5_5_0_clang_64bit-Debug/Plot_n10000.png>
 Package pdftex.def Info: ../build-Project1-Desktop_Qt_5_5_0_clang_64bit-Debug/P
-lot_n10000.png used on input line 176.
+lot_n10000.png used on input line 189.
 (pdftex.def)             Requested size: 256.0748pt x 192.05052pt.
 
 [2] [3 <../build-Project1-Desktop_Qt_5_5_0_clang_64bit-Debug/Plot_n10.png (PNG 
@@ -560,16 +593,16 @@ copy)> <../build-Project1-Desktop_Qt_5_5_0_clang_64bit-Debug/Plot_n100.png (PNG
  copy)> <../build-Project1-Desktop_Qt_5_5_0_clang_64bit-Debug/Plot_n1000.png (P
 NG copy)> <../build-Project1-Desktop_Qt_5_5_0_clang_64bit-Debug/Plot_n10000.png
  (PNG copy)>]
-Underfull \hbox (badness 10000) in paragraph at lines 259--260
+Underfull \hbox (badness 10000) in paragraph at lines 270--271
 
  []
 
 [4] (./FYS4150-Report-Project1.aux) ) 
 Here is how much of TeX's memory you used:
- 5106 strings out of 493117
- 74232 string characters out of 6135433
- 239963 words of memory out of 5000000
- 8454 multiletter control sequences out of 15000+600000
+ 6508 strings out of 493117
+ 93973 string characters out of 6135433
+ 283471 words of memory out of 5000000
+ 9843 multiletter control sequences out of 15000+600000
  48287 words of font info for 112 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  42i,11n,40p,664b,507s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -585,7 +618,7 @@ texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/local/texlive/2014/texmf-dist
 /fonts/type1/urw/times/utmbi8a.pfb></usr/local/texlive/2014/texmf-dist/fonts/ty
 pe1/urw/times/utmr8a.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/urw/ti
 mes/utmri8a.pfb>
-Output written on FYS4150-Report-Project1.pdf (4 pages, 286079 bytes).
+Output written on FYS4150-Report-Project1.pdf (4 pages, 290337 bytes).
 PDF statistics:
  66 PDF objects out of 1000 (max. 8388607)
  44 compressed objects within 1 object stream

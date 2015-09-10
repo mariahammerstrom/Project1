@@ -6,6 +6,7 @@
 
 \usepackage{multicol}
 \setlength{\columnsep}{1cm}
+\usepackage[]{algorithm2e}
 
 \usepackage{lipsum}% for dummy text
 \usepackage[varg]{txfonts}
@@ -105,6 +106,7 @@ In our case we are dealing with a simple tridiagonal matrix. We can therefore re
                       \end{array} \right).
 \end{equation}
 This can be written as
+
 \begin{equation}\label{eq:tridiagonal_system}
   a_iv_{i-1}+b_iv_i+c_iv_{i+1} = \tilde{b}_i
 \end{equation}
@@ -116,41 +118,55 @@ The first thing to do is to realize that Eq. (\ref{eq:tridiagonal_system}) gives
 	a_i v_{i-1} + b_i v_i + c_i v_{i+1} &= \tilde{b}_i, \hspace{0.5cm} i = 2, \dots, n - 1 \\
 	a_n v_{n-1} + b_n v_n &= \tilde{b}_n, \hspace{0.5cm} i = n  ,
 \end{align}
-where the boundary conditions have been applied to simplify the equations. The idea now is to subtract one row with a scalar multiple of another to eliminate variables. First we want to eliminate $v_1$, this can be done by dividing the first equation by $b_i$, which gives
+where the boundary conditions have been applied to simplify the equations. The idea now is to subtract one row with a scalar multiple of another to eliminate variables. First we want to eliminate $v_1$, this can be done by dividing the first equation by $b_i$, which gives:
+
 \begin{equation}
 	v_1 = \tilde{b}_1/b_1 - \frac{c_1}{b_1}v_2.
 \end{equation}
+
 Then we can follow the same approach to eliminate $v_i$ by dividing each equation by $b_i$,\\
+
 \begin{equation}
 	v_i = \tilde{b}_i/b_i - \frac{a_i}{b_i}v_{i-1} - \frac{c_i}{b_i}v_{i+1}
 \end{equation}
-Trying to insert $v_{i-1}$ into the equations for $v_i$ can proove to be difficult. After some algebra one finds that 
+
+\noindent Trying to insert $v_{i-1}$ into the equations for $v_i$ can prove to be difficult. After some algebra one finds that:
+
 \begin{equation}\label{eq:fsi}
 	v_i = \left( \tilde{b}_i - a_iv_{i-1} - c_iv_{i+1} \right)/\left( b_i - \frac{a_ic_{i-1}}{d_{i-1}} \right),
 \end{equation}
-where $d_{i-1} =  b_{i-1} - a_{i-1}c_{i-2}/d_{i-2}$, and $d_{2} = b_2 - a_2c_1/b_1$.
-We then have an equation for each $v_n$, and can start going back. This is 
-done with a backward substitution. As we see from eq. (\ref{eq:fsi}), we have to add a term $-c_iv_{i+1}/d_i$.
-A pseudocode for solving this set of equations is given as
-\begin{center} % LaTeX has an algorithm function, but not sure how it works
-v[1] = f[1]/b[1]
-for i from 2 up to n-1
-	do  temp[i] = c[i-1]/b[i-1] 
-		btemp = b[i] - a[i]temp[i]
-		v[i] = (f[i]- v[i-1])/btemp
 
-for i from n-1 down to 1
-    do  v[i] -= temp[i+1]*v[i+1]
-\end{center}
+\noindent where $d_{i-1} =  b_{i-1} - a_{i-1}c_{i-2}/d_{i-2}$, and $d_{2} = b_2 - a_2c_1/b_1$.
+
+We then have an equation for each $v_n$, and can start going back. This is done with a backward substitution. As we see from Eq. (\ref{eq:fsi}), we have to add a term $-c_iv_{i+1}/d_i$. \\
+
+\noindent A pseudocode for solving this set of equations is given as:
+
+\begin{algorithm}[H]
+v[1] = f[1]/b[1]
+
+\For{i from 2 up to n-1}{
+	temp[i] = c[i-1]/b[i-1]
+	 
+	btemp = b[i] - a[i]temp[i]
+	
+	v[i] = (f[i]- v[i-1])/btemp}
+
+\For{for i from n-1 down to 1}{
+	v[i] -= temp[i+1]*v[i+1]}
+\end{algorithm}
+
 %\noindent The algorithm used in our code is given on p. 186 in the lecture notes.
 
 
 
 \subsection{LU decomposition}
-In addition to solving the linear second-order differential equation Eq.~\ref{eq:Poisson} using the simple algorithm described above, we want to solve the equation using LU decomposition, then compare the results. Doing an LU decomposition, means rewriting matrix {\bf A} as a product of a lower triangular matrix {\bf L} and an upper triangular matrix {\bf U}, so that
+In addition to solving the linear second-order differential equation Eq. (\ref{eq:Poisson}) using the simple algorithm described above, we want to solve the equation using LU decomposition, then compare the results. Doing an LU decomposition, means rewriting matrix {\bf A} as a product of a lower triangular matrix {\bf L} and an upper triangular matrix {\bf U}, so that
+
 \begin{equation*}
 	{\bf A} = {\bf L}{\bf U}.
 \end{equation*}
+
 For the LU decomposition we will use the provided \verb@lib.cpp@ library.
 
 
