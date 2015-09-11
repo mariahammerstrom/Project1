@@ -191,10 +191,10 @@ $i = 1, \dots, n$, where $u_i$ represents the closed-form analytical solution, w
 \begin{center}
 \begin{tabular}{ l l }\hline
 	$n$ 		&Maximum error (log$_{10}$) \\ \hline
-	10 		& 1.18895 \\
-	$10^2$  	& 1.03632 \\
-	$10^3$ 	& 1.00786 \\
-	$10^4$ 	& 1.00076 \\
+	10 		& -0.312833 \\
+	$10^2$  	& -0.305022 \\
+	$10^3$ 	& -0.30146 \\
+	$10^4$ 	& -0.301073 \\
 	\hline
 \end{tabular}
 \end{center}
@@ -244,7 +244,7 @@ In Fig.~\ref{fig:n-values} the results for the different $n$-values are shown. F
 
 If we look at this development with regards to computing time as well, shown in Table 2, we see that the computing time for the simple algorithm for our special case of a tridiagonal matrix does not care about the increasing value of $n$, while the LU decomposition goes rapidly slower as $n$ is increased. Adding this to the fact that the result from the LU decomposition is not very impressive, the simple algorithm is a highly preferred method to use in this case.
 
-If we review the results of the error analysis shown in Table 1, we see that the result is as expected: The error decreases as $n$ increases. For the largest value of $n$, the error is about zero (non-log scale).
+If we review the results of the error analysis shown in Table 1, we see that the result is as expected: The error decreases as $n$ increases. The change in the relative error is largest when going from $n = 10$ to $n = 10^2$, and it hardly changes from $n = 10^2$ to $n = 10^3$ and higher. This corresponds well with what we see in Fig.~\ref{fig:n-values} for the blue and red lines. This means that the effect of increasing $n$ to a very large value when using our simple algorithm doesn't give us much new information. But because the code runs so quickly even if $n$ is large, there is no reason to limit oneself to a small value for $n$.
 
 From the calculations of the number of floating point operations in Table 2, we see that the simple algorithm continues to have a rather small number of FLOPS as $n$ increases, while Gaussian elimination and LU decomposition have a number of FLOPS that is quickly increasing, which is the reason for the long time usage of the LU decomposition method. 
 
