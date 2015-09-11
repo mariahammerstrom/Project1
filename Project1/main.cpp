@@ -103,10 +103,10 @@ int main()
     // ERROR
     double e[n], err[n], max=0.0;
     for(i=1 ; i < n ; i++){
-      e[i] = (v[n-i]-u_analytic[i])/u_analytic[i];
+      e[i] = (v[i]-u_analytic[i])/u_analytic[i];
       err[i] = log10(fabs(e[i]));
-      if (err[i]>max)
-          max = fabs(e[i]);
+      if (fabs(err[i])>max)
+          max = err[i];
     }
 
     cout << "Max relative error: "<< max << endl;
